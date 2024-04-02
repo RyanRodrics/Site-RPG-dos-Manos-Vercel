@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{#each css}}
+    <link rel="stylesheet" href="/css/{{css}}.css">
+    {{else}}
+    {{/each}}
+    <link rel="stylesheet" href="/css/rodape.css">
+    <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
+    <title>Site dos Manos</title>
+</head>
+<body>
+    {{>_navbar}}
+    {{>_msg}}
+    {{{body}}}
+    
+    {{#each js}}
+        <script src="/js/{{js}}.js"></script>
+    {{else}}
+    {{/each}}
+    <footer class = "rodape">
+        {{!-- {{>_rodape}} --}}
+    </footer>
+</body>
+</html>
