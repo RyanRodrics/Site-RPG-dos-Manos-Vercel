@@ -1,0 +1,132 @@
+{{#each erros}}
+    <div style="background-color: red; color:white; padding: 10px; margin-top: 10px">{{texto}}</div>
+{{else}}
+{{/each}}
+
+<h3>Nova Ficha:</h3>
+<div>
+    <hr>
+    <form action="/admin/fichas/new" method="post" oninput="outca.value = 10+Math.floor((parseInt(des.value)-10)/2); outhp.value=level.value*(10+Math.floor((parseInt(con.value)-10)/2));" id="addficha">
+
+        <label for="nick">Nick: </label>
+        <input type="text" name="nick" id="nick" required>
+
+        <label for="level">Level: </label>
+        <input type="number" name="level" id="level" value="1">
+
+        <label for="gender">Gender: </label>
+        <select name="gender" id="gender" value="N">
+            <option value="N">N</option>
+            <option value="M">M</option>
+            <option value="F">F</option>      
+        </select>
+        <br><br>
+
+        <label for="ca">CA: </label>  
+        <output name="outca" id="outca" form="addficha"></output>
+
+        <label for="hp">HP: </label>
+        <output name="outhp" id="outhp" form="addficha"></output>
+        <br><br>
+
+        <label for="money">Money: </label>
+        <input type="number" name="money" id="money" value="100">
+        <br><br>
+
+        <label for="inventory">Inventory</label>
+        <br>
+        <label for="armas">Armas:</label>
+        <br> 
+        <input type="checkbox" name="motosserra" id="motosserra" >
+        <label for="motosserra">Motosserra</label>
+         <input type="checkbox" name="arco" id="arco">   
+        <label for="arco">Arco</label>
+         <input type="checkbox" name="fuzil" id="fuzil">   
+        <label for="fuzil">Fuzil</label>
+         <input type="checkbox" name="espada" id="espada">   
+        <label for="espada">Espada</label>
+         <input type="checkbox" name="rapieira" id="rapieira">     
+        <label for="rapieira">Rapieira</label>
+         <input type="checkbox" name="pistola" id="pistola">     
+        <label for="pistola">Pistola</label>
+         <input type="checkbox" name="lancaGranada" id="lancaGranada">     
+        <label for="lancaGranada">Lança Granada</label>
+        <input type="checkbox" name="marteloDeGuerra" id="marteloDeGuerra">      
+        <label for="marteloDeGuerra">Martelo de Guerra</label>
+         <input type="checkbox" name="chicote" id="chicote">      
+        <label for="chicote">Chicote</label>
+        <br>
+        <label for="armadura">Armadura:</label>
+        <br>
+         <input type="checkbox" name="casaco" id="casaco">
+        <label for="casaco">Casaco</label>
+         <input type="checkbox" name="couroBatido" id="couroBatido">   
+        <label for="couroBatido">Couro Batido</label>
+         <input type="checkbox" name="roupaDeAlgodao" id="roupaDeAlgodao">   
+        <label for="roupaDeAlgodao">Roupa de Algodao</label>
+         <input type="checkbox" name="armaduraDeFerro" id="armaduraDeFerro">   
+        <label for="armaduraDeFerro">Armadura de Ferro</label>
+         <input type="checkbox" name="colete" id="colete">     
+        <label for="colete">Colete</label>
+         <input type="checkbox" name="armaduraDeGrafeno" id="armaduraDeGrafeno">     
+        <label for="armaduraDeGrafeno">Armadura de Grafeno</label>
+         <input type="checkbox" name="armaduraDeDiamante" id="armaduraDeDiamante">     
+        <label for="armaduraDeDiamante">Armadura de Diamante</label>
+        <input type="checkbox" name="metalGear" id="metalGear">      
+        <label for="metalGear">Metal Gear</label>
+         <input type="checkbox" name="adamantium" Ad="adamantium">     
+        <label for="adamantium">Adamantium</label>                                             
+        <br><br>
+
+        <label for="attributes">Attributes</label>
+        <br>
+        <label for="for">For: </label>
+        <input type="number" name="for" id="for" value="10">
+        <label for="des">Des: </label>
+        <input type="number" name="des" id="des" value="10">
+        <label for="con">Con: </label>
+        <input type="number" name="con" id="con" value="10">
+        <label for="int">Int: </label>
+        <input type="number" name="int" id="int" value="10">    
+        <label for="sab">Sab: </label>
+        <input type="number" name="sab" id="sab" value="10">    
+        <label for="car">Car: </label>
+        <input type="number" name="car" id="car" value="10">                    
+        <br><br>
+
+        <label for="progress">Progress: </label>
+        <br>
+        <input type="checkbox" id="checks" name="denji">
+        <label for="denji">Denji</label>
+        <label for="repdenji" id="repdenji" style="display: none;">Reputação: </label>
+        <input type="number" id="repdenji" name="repdenji" value="50" style="display: none;">
+        <br>
+        <input type="checkbox" id="checks" name="simon">
+        <label for="simon">Simon</label>
+        <label for="repsimon" id="reputsimon" style="display: none;">Reputação: </label>
+        <input type="number" id="repsimon" name="repsimon" value="50" style="display: none;">
+
+        <br><br>
+        <button type="submit">Criar Ficha</button>
+    </form>
+    <hr>
+</div>
+
+<script>
+    let personagens = document.querySelectorAll("#checks");
+
+    personagens.forEach(function(personagem) {
+        personagem.addEventListener('change', function() {
+            let string = `#rep${personagem.name}`;
+            if (this.checked) {
+                document.querySelectorAll(string).forEach(function (element) {
+                    element.style.display = "flex";
+                });
+            } else {
+                document.querySelectorAll(string).forEach(function (element) {
+                    element.style.display = "none";
+                });
+            }
+        });
+    });
+</script>

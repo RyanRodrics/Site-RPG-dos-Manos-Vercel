@@ -1,0 +1,185 @@
+{{#each erros}}
+    <div style="background-color: red; color:white; padding: 10px; margin-top: 10px">{{texto}}</div>
+{{else}}
+{{/each}}
+
+<h3>Editar Ficha:</h3>
+<div>
+    <hr>
+    <form action="/admin/fichas/edit" method="post" oninput="outca.value = 10+Math.floor((parseInt(des.value)-10)/2); outhp.value=level.value*(10+Math.floor((parseInt(con.value)-10)/2));" id="editficha">
+        <input type="hidden" name="id" id="id" value="{{ficha._id}}">
+
+        <label for="nick">Nick: </label>
+        <input type="text" name="nick" id="nick" value="{{ficha.nick}}" required>
+
+        <label for="level">Level: </label>
+        <input type="number" name="level" id="level" value="{{ficha.level}}">
+
+        <label for="gender">Gender: </label>
+        <input type="hidden" id="inputgender" value="{{ficha.gender}}">
+        <select name="gender" id="gender">
+            <option id="N" value="N">N</option>
+            <option id="M" value="M">M</option>
+            <option id="F" value="F">F</option>      
+        </select>
+        <br><br>
+
+        <label for="ca">CA: </label>
+        <output name="outca" id="outca" form="editficha"></output>
+
+        <label for="hp">HP: </label>
+        <output name="outhp" id="outhp" form="editficha"></output>
+        <br><br>
+
+        <label for="money">Money: </label>
+        <input type="number" name="money" id="money" value="{{ficha.money}}">
+        <br><br>
+
+        <label for="inventory">Inventory</label>
+        <br>
+        <label for="armas">Armas:</label>
+        <input type="hidden" name="armas" id="armas" value="{{ficha.inventory.armas}}">
+        <br> 
+        <input type="checkbox" name="Motosserra" id="Motosserra">
+        <label for="Motosserra">Motosserra</label>
+         <input type="checkbox" name="Arco" id="Arco">   
+        <label for="Arco">Arco</label>
+         <input type="checkbox" name="Fuzil" id="Fuzil">   
+        <label for="Fuzil">Fuzil</label>
+         <input type="checkbox" name="Espada" id="Espada">   
+        <label for="Espada">Espada</label>
+         <input type="checkbox" name="Rapieira" id="Rapieira">     
+        <label for="Rapieira">Rapieira</label>
+         <input type="checkbox" name="Pistola" id="Pistola">     
+        <label for="Pistola">Pistola</label>
+         <input type="checkbox" name="LancaGranada" id="LancaGranada">     
+        <label for="LancaGranada">Lança Granada</label>
+        <input type="checkbox" name="MarteloDeGuerra" id="MarteloDeGuerra">      
+        <label for="MarteloDeGuerra">Martelo de Guerra</label>
+         <input type="checkbox" name="Chicote" id="Chicote">      
+        <label for="chicote">Chicote</label>
+        <br>
+        <label for="armaduras">Armaduras:</label>
+        <input type="hidden" name="armaduras" id="armaduras" value="{{ficha.inventory.armaduras}}">
+        <br>
+         <input type="checkbox" name="Casaco" id="Casaco">
+        <label for="Casaco">Casaco</label>
+         <input type="checkbox" name="CouroBatido" id="CouroBatido">   
+        <label for="CouroBatido">Couro Batido</label>
+         <input type="checkbox" name="RoupaDeAlgodao" id="RoupaDeAlgodao">   
+        <label for="RoupaDeAlgodão">Roupa de Algodão</label>
+         <input type="checkbox" name="ArmaduraDeFerro" id="ArmaduraDeFerro">   
+        <label for="ArmaduraDeFerro">Armadura de Ferro</label>
+         <input type="checkbox" name="Colete" id="Colete">     
+        <label for="Colete">Colete</label>
+         <input type="checkbox" name="ArmaduraDeGrafeno" id="ArmaduraDeGrafeno">     
+        <label for="ArmaduraDeGrafeno">Armadura de Grafeno</label>
+         <input type="checkbox" name="ArmaduraDeDiamante" id="ArmaduraDeDiamante">     
+        <label for="ArmaduraDeDiamante">Armadura de Diamante</label>
+        <input type="checkbox" name="MetalGear" id="MetalGear">      
+        <label for="MetalGear">Metal Gear</label>
+         <input type="checkbox" name="Adamantium" Ad="Adamantium">     
+        <label for="Adamantium">Adamantium</label>                                             
+        <br><br>
+
+        <label for="attributes">Attributes</label>
+        <br>
+        <label for="for">For: </label>
+        <input type="number" name="for" id="for" value="{{ficha.attributes.for}}">
+        <label for="des">Des: </label>
+        <input type="number" name="des" id="des" value="{{ficha.attributes.des}}">
+        <label for="con">Con: </label>
+        <input type="number" name="con" id="con" value="{{ficha.attributes.con}}">
+        <label for="int">Int: </label>
+        <input type="number" name="int" id="int" value="{{ficha.attributes.int}}">    
+        <label for="sab">Sab: </label>
+        <input type="number" name="sab" id="sab" value="{{ficha.attributes.sab}}">    
+        <label for="car">Car: </label>
+        <input type="number" name="car" id="car" value="{{ficha.attributes.car}}">                    
+        <br><br>
+
+        <label for="progress">Progress: </label>
+        <input type="hidden" id="progress" name="progress" value="{{ficha.progress}}">
+        <br>
+        <input type="checkbox" id="checks" name="denji">
+        <label for="denji">Denji</label>
+        <label for="repdenji" id="repdenji" style="display: none;">Reputação: </label>
+        <input type="number" id="repdenji" name="repdenji" value="50" style="display: none;">
+        <br>
+        <input type="checkbox" id="checks" name="simon">
+        <label for="simon">Simon</label>
+        <label for="repsimon" id="repsimon" style="display: none;">Reputação: </label>
+        <input type="number" id="repsimon" name="repsimon" value="50" style="display: none;">
+
+        <br><br>
+        <button type="submit">Editar Ficha</button>
+    </form>
+    <hr>
+</div>
+
+{{#each ficha.progress}}
+    <input type="hidden" id="progressName" name="progressName" value="{{this.nome}}">
+    <input type="hidden" id="progressRep" name="progressRep" value="{{this.rep}}">
+{{else}}
+{{/each}}
+
+
+<script>
+    //gender e inventory
+    document.getElementById(`${document.getElementById("inputgender").value}`).selected = "selected";
+
+    const [...armas] = document.getElementById("armas").value.split(",");
+    const armastot = ["Motosserra", "Arco", "Fuzil", "Espada", "Rapieira", "Pistola", "LancaGranada", "MarteloDeGuerra", "Chicote"];
+    const [...armaduras] = document.getElementById("armaduras").value.split(",");
+    const armadurastot = ["Casaco", "CouroBatido", "RoupaDeAlgodão", "ArmaduraDeFerro", "Colete", "ArmaduraDeGrafeno", "ArmaduraDeDiamante", "MetalGear", "Adamantium"];
+
+    armastot.forEach(checkarmas);
+    armadurastot.forEach(checkarmaduras);
+
+    function checkarmas (element) {
+        if (armas.includes(element)) {document.getElementById(`${element}`).checked = "checked"}
+    }
+    function checkarmaduras (element) {
+        if (armaduras.includes(element)) {document.getElementById(`${element}`).checked = "checked"}
+    }
+</script>
+
+<script>
+    // progress
+    const progressNames = document.getElementsByName("progressName");
+    const progressReps = document.getElementsByName("progressRep");
+    const checks = document.querySelectorAll("#checks");
+    let i = 0;
+
+    progressNames.forEach(function(nome) {
+        document.getElementsByName(nome.value.toLowerCase())[0].checked = "checked";
+        document.getElementsByName(`rep${nome.value.toLowerCase()}`)[0].value = progressReps[i].value;
+        i++;
+    });
+
+    checks.forEach(function(check) {
+        if (check.checked) {
+            document.querySelectorAll(`#rep${check.name}`)[0].style.display = "flex";
+            document.querySelectorAll(`#rep${check.name}`)[1].style.display = "flex";
+            
+        } else {
+            document.querySelectorAll(`#rep${check.name}`)[0].style.display = "none";
+            document.querySelectorAll(`#rep${check.name}`)[1].style.display = "none";
+        }
+        check.addEventListener('change', function() {
+           if (this.checked) {
+            document.querySelectorAll(`#rep${this.name}`)[0].style.display = "flex";
+            document.querySelectorAll(`#rep${this.name}`)[1].style.display = "flex";
+            
+        } else {
+            document.querySelectorAll(`#rep${this.name}`)[0].style.display = "none";
+            document.querySelectorAll(`#rep${this.name}`)[1].style.display = "none";
+        } 
+        });
+    });
+
+    
+
+</script>
+
+

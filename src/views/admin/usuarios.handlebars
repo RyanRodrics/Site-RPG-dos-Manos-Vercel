@@ -1,0 +1,55 @@
+<h3>Lista de Usuários</h3>
+<a href="/admin/usuarios/add"><button>Novo Usuário</button></a>
+
+{{#each usuarios}}
+<div>
+    <hr>
+    <h4>Username: {{username}}</h4>
+    <h5>Nickname: {{nickname}}</h5>
+    <h5>Password: {{password}}</h5>
+    <h5>eAdmin: {{eAdmin}}</h4>
+    <h5>Token: <img src="{{token}}" alt="{{token}}"></h4>
+    <h5>Saves: </h4>
+    <ul>
+        <li>
+            Save1: 
+            {{#if gameSaves.save1}}
+                {{gameSaves.save1}}
+            {{else}}
+                null
+            {{/if}}
+        </li>
+        <li>
+            Save2: 
+            {{#if gameSaves.save2}}
+                {{gameSaves.save2}}
+            {{else}}
+                null
+            {{/if}}
+        </li>
+        <li>
+            Save3: 
+            {{#if gameSaves.save3}}
+                {{gameSaves.save3}}
+            {{else}}
+                null
+            {{/if}}
+        </li>
+        <li>
+            Save4: 
+            {{#if gameSaves.save4}}
+                {{gameSaves.save4}}
+            {{else}}
+                null
+            {{/if}}
+        </li>
+    </ul>
+    <h5>Date: {{date}}</h5>
+    <br><br>
+    <a href="/admin/usuarios/edit/{{_id}}"><button>Editar</button></a>
+    <a href="/admin/usuarios/deletar/{{_id}}"><button>Deletar</button></a>
+    <hr>
+</div>
+{{else}}
+<h4>Não há usuários registrados</h4>
+{{/each}}

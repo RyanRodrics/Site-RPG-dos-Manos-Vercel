@@ -1,0 +1,91 @@
+{{#each erros}}
+    <div style="background-color: red; color:white; padding: 10px; margin-top: 10px">{{texto}}</div>
+{{else}}
+{{/each}}
+
+<h3>Novo Usuário:</h3>
+<div>
+    <hr>
+    <form action="/admin/usuarios/new" method="post">
+
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" required>
+
+        <label for="nickname">Nickname: </label>
+        <input type="text" name="nickname" id="nickname" required>
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" required>
+
+        <label for="token">Token: </label>
+        <select name="token" id="token" onchange="javascript:mostraImg(this);" value="/imgs/tokens/login.png">
+            <option value="/imgs/tokens/login.png">Padrão</option>
+            <option value="/imgs/tokens/ryan.Avatar.webp">Ryan</option>
+        </select> 
+        <br><br>
+        <img src="/imgs/tokens/login.png" alt="alt" id="imgtoken">    
+        <br><br>
+
+        <label for="eAdmin">eAdmin: </label>
+        <select name="eAdmin" id="eAdmin" value="0">
+            <option value="0">Não</option>
+            <option value="1">Sim</option>
+        </select>
+        <br><br>
+
+        <label for="gameSaves">Saves:</label>
+        <ul>
+            <li>
+                <label for="save1">Save 1:</label>
+                <select name="save1" id="save1">
+                    <option value="0">null</option>
+                    {{#each fichas}}
+                        <option value="{{_id}}">{{nick}}</option>
+                    {{else}}
+                    {{/each}}
+                </select>
+            </li>
+            <li>
+                <label for="save2">Save 2:</label>
+                <select name="save2" id="save2">
+                    <option value="0">null</option>
+                    {{#each fichas}}
+                        <option value="{{_id}}">{{nick}}</option>
+                    {{else}}
+                    {{/each}}
+                </select>
+            </li>
+            <li>
+                <label for="save3">Save 3:</label>
+                <select name="save3" id="save3">
+                    <option value="0">null</option>
+                    {{#each fichas}}
+                        <option value="{{_id}}">{{nick}}</option>
+                    {{else}}
+                    {{/each}}
+                </select>
+            </li>
+            <li>
+                <label for="save4">Save 4:</label>
+                <select name="save4" id="save4">
+                    <option value="0">null</option>
+                    {{#each fichas}}
+                        <option value="{{_id}}">{{nick}}</option>
+                    {{else}}
+                    {{/each}}
+                </select>
+            </li>
+        </ul>    
+        
+        <br><br>
+        <button type="submit">Criar Usuário</button>
+    </form>
+    <hr>
+</div>
+
+<script>
+    const imgtoken = document.querySelector("#imgtoken");
+    function mostraImg(op) {
+        imgtoken.src = op.value;
+    }
+</script>
