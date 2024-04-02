@@ -67,6 +67,10 @@ app.get('/', (req, res) =>{
     res.render("index", {css: [{css: "main"}]});
 });
 
+app.get('/gamedragon', (req, res) =>{
+    res.render("games/gamedragon", {css: [{css: "gamedragon"}], js: [{js: "gamedragon"}]});
+});
+
 app.use('/admin', admin);
 
 
