@@ -5,9 +5,9 @@ const router = express.Router();
 import bcrypt from 'bcryptjs';
 
 // Models
-import '../models/Usuario.js';
+import '../../models/Usuario.js';
 const Usuario = mongoose.model("usuarios");
-import '../models/Ficha.js';
+import '../../models/Ficha.js';
 const Ficha = mongoose.model("fichas");
 
 
