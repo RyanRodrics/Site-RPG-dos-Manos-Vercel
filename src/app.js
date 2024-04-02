@@ -38,7 +38,7 @@ mongoose.Promise = global.Promise;
 const dbUrl = process.env.DB_KEY;
 const connectDatabase = () =>{
     console.log("Esperando conectar com atlas...");
-    mongoose.connect("mongodb+srv://ryanadmin:mano1534@rpgdosmanos0.01e1wnu.mongodb.net/").then(() =>{
+    mongoose.connect("mongodb+srv://ryanadmin:mano1534@rpgdosmanos0.01e1wnu.mongodb.net/?retryWrites=true&w=majority&appName=RPGdosManos0").then(() =>{
         console.log("Conectado com o atlas ");
     }).catch((error) =>{
         console.log("Erro ao conectar com o atlas: " + error);
