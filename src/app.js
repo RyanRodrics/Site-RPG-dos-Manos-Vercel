@@ -6,7 +6,7 @@ import session from 'express-session';
 import flash from 'connect-flash';
 import path from 'path';
 import { fileURLToPath } from 'url';
-//import admin from './routes/admin.js';
+import admin from './routes/admin.js';
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -38,7 +38,6 @@ mongoose.Promise = global.Promise;
 const dbUrl = process.env.DB_KEY;
 const connectDatabase = () =>{
     console.log("Esperando conectar com atlas...");
-
     mongoose.connect("mongodb+srv://ryanadmin:mano1534@rpgdosmanos0.01e1wnu.mongodb.net/").then(() =>{
         console.log("Conectado com o atlas ");
     }).catch((error) =>{
@@ -68,7 +67,7 @@ app.get('/', (req, res) =>{
     res.render("index", {css: [{css: "main"}]});
 });
 
-//app.use('/admin', admin);
+app.use('/admin', admin);
 
 
 // OUTROS
