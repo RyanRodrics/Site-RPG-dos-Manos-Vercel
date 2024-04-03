@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navbar{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    position:relative;
+}

@@ -8,10 +8,12 @@
     {{else}}
     {{/each}}
     <link rel="stylesheet" href="/css/rodape.css">
+    <link rel="stylesheet" href="/css/navbar.css">
     <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
     <title>Site dos Manos</title>
 </head>
 <body>
+    {{>_stars}}
     {{>_navbar}}
     {{>_msg}}
     {{{body}}}
@@ -21,7 +23,7 @@
     {{else}}
     {{/each}}
     <footer class = "rodape">
-        {{!-- {{>_rodape}} --}}
+         {{>_rodape}} 
     </footer>
 </body>
 </html>
