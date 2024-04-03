@@ -43,7 +43,7 @@
                 <select name="save1" id="save1">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
+                        <option id="{{_id}}001" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
@@ -54,7 +54,7 @@
                 <select name="save2" id="save2">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
+                        <option id="{{_id}}002" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
@@ -65,7 +65,7 @@
                 <select name="save3" id="save3">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
+                        <option id="{{_id}}003" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
@@ -76,7 +76,7 @@
                 <select name="save4" id="save4">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
+                        <option id="{{_id}}004" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
@@ -91,10 +91,11 @@
 
 <script>
     document.getElementById(`${document.getElementById("inputtoken").value}`).selected = "selected";
-    document.getElementById(`${document.getElementById("inputsave1").value}`).selected = "selected";
-    document.getElementById(`${document.getElementById("inputsave2").value}`).selected = "selected";
-    document.getElementById(`${document.getElementById("inputsave3").value}`).selected = "selected";
-    document.getElementById(`${document.getElementById("inputsave4").value}`).selected = "selected";
+    document.getElementById(`${document.getElementById("inputsave4").value}001`).selected = "selected";
+    document.getElementById(`${document.getElementById("inputsave4").value}002`).selected = "selected";
+    document.getElementById(`${document.getElementById("inputsave4").value}003`).selected = "selected";
+    document.getElementById(`${document.getElementById("inputsave4").value}004`).selected = "selected";
+    
 </script>
 
 <script>
