@@ -72,7 +72,7 @@ app.get('/gamedragon', (req, res) =>{
 });
 
 app.get('/herois2', (req, res) =>{
-    res.render("herois2", {css: [{css: "herois2"}], js: [{js: "herois2"}]})
+    res.render("herois2", {css: [{css: "herois2"}], js: [{js: "herois2"}], stars: "existo"})
 });
 
 app.use('/admin', admin);
