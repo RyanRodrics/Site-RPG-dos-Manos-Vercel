@@ -19,12 +19,13 @@
         <input type="password" name="password" id="password" value="{{usuario.password}}" required>
 
         <label for="token">Token: </label>
-        <select name="token" id="token" onchange="javascript:mostraImg(this);" value="{{usuario.token}}">
-            <option value="/imgs/tokens/login.png">Padrão</option>
-            <option value="/imgs/tokens/ryan.Avatar.webp">Ryan</option>
+        <input type="hidden" id="inputtoken" value="{{usuario.token}}">
+        <select name="token" id="token" onchange="javascript:mostraImg(this);">
+            <option id="/imgs/tokens/login.png" value="/imgs/tokens/login.png">Padrão</option>
+            <option id="/imgs/tokens/ryan.Avatar.webp" value="/imgs/tokens/ryan.Avatar.webp">Ryan</option>
         </select> 
         <br><br>
-        <img src="/imgs/tokens/login.png" alt="alt" id="imgtoken">    
+        <img src="{{usuario.token}}" alt="alt" id="imgtoken">    
         <br><br>
 
         <label for="eAdmin">eAdmin: </label>
@@ -83,6 +84,11 @@
     </form>
     <hr>
 </div>
+
+<script>
+    console.log(`${document.getElementById("inputtoken").value}`);
+    document.getElementById(`${document.getElementById("inputtoken").value}`).selected = "selected";
+</script>
 
 <script>
     const imgtoken = document.querySelector("#imgtoken");
