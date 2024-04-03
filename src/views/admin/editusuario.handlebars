@@ -39,40 +39,44 @@
         <ul>
             <li>
                 <label for="save1">Save 1:</label>
+                <input type="hidden" id="inputsave1" value="{{usuario.gameSaves.save1}}">
                 <select name="save1" id="save1">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option value="{{_id}}">{{nick}}</option>
+                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
             </li>
             <li>
                 <label for="save2">Save 2:</label>
+                <input type="hidden" id="inputsave2" value="{{usuario.gameSaves.save2}}">
                 <select name="save2" id="save2">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option value="{{_id}}">{{nick}}</option>
+                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
             </li>
             <li>
                 <label for="save3">Save 3:</label>
+                <input type="hidden" id="inputsave3" value="{{usuario.gameSaves.save3}}">
                 <select name="save3" id="save3">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option value="{{_id}}">{{nick}}</option>
+                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
             </li>
             <li>
                 <label for="save4">Save 4:</label>
+                <input type="hidden" id="inputsave4" value="{{usuario.gameSaves.save4}}">
                 <select name="save4" id="save4">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option value="{{_id}}">{{nick}}</option>
+                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
@@ -86,8 +90,11 @@
 </div>
 
 <script>
-    console.log(`${document.getElementById("inputtoken").value}`);
     document.getElementById(`${document.getElementById("inputtoken").value}`).selected = "selected";
+    document.getElementById(`${document.getElementById("inputsave1").value}`).selected = "selected";
+    document.getElementById(`${document.getElementById("inputsave2").value}`).selected = "selected";
+    document.getElementById(`${document.getElementById("inputsave3").value}`).selected = "selected";
+    document.getElementById(`${document.getElementById("inputsave4").value}`).selected = "selected";
 </script>
 
 <script>
