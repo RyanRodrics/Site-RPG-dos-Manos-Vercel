@@ -14,7 +14,8 @@
 }
 .cabecalho{
     display:flow;
-    background-color: #020202;
+    background-color: rgba(0,0, 0,1);
+    
     margin-bottom: 0;
 
     height: 100vh;
@@ -362,7 +363,7 @@
 }
 
 #jogadores{
-
+    min-height: 100vh;
     background-color: #020202;
     font-family: impact;
     margin-bottom: 0;
@@ -680,4 +681,7 @@
 .rodape .contato .email a{
     color: cyan;
     text-decoration:underline;
+}
+.separa-div{
+   border-color: goldenrod;
 }
