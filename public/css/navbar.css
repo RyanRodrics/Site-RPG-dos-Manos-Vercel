@@ -1,10 +1,47 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
+
 #navbar{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
     position:relative;
+    height: 19px;
 }
+
+#navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#navbar li{
+    display: inline;
+}
+
+#navbar li a{
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    padding-bottom: 0;
+    text-decoration: none;
+}
+
+#navbar li a:hover{
+    background-color: #111;
+}
+
+#navbar .active{
+    background-color: #04AA6D;
+}
+
+#navbar li{
+    border-right: 1px solid #bbb;
+}
+  
+#navbar li:last-child{
+    border-right: none;
+}
+
