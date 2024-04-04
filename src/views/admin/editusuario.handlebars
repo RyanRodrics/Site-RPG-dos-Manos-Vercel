@@ -43,7 +43,7 @@
                 <select name="save1" id="save1">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
+                        <option id="saves1" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
@@ -54,7 +54,7 @@
                 <select name="save2" id="save2">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
+                        <option id="saves2" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
@@ -65,7 +65,7 @@
                 <select name="save3" id="save3">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
+                        <option id="saves3" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
@@ -76,7 +76,7 @@
                 <select name="save4" id="save4">
                     <option value="0">null</option>
                     {{#each fichas}}
-                        <option id="{{_id}}" value="{{_id}}">{{nick}}</option>
+                        <option id="saves4" value="{{_id}}">{{nick}}</option>
                     {{else}}
                     {{/each}}
                 </select>
@@ -92,7 +92,13 @@
 <script>
     document.getElementById(`${document.getElementById("inputtoken").value}`).selected = "selected";
     
-    
+    for (let i = 1; i<5; i++) {
+        document.querySelectorAll(`#saves${i}`).forEach(function(op) {
+            if (document.getElementById(`inputsave${i}`).value == op.value) {
+                op.selected = "selected";
+            };
+        });
+    }
     
 </script>
 
