@@ -16,17 +16,20 @@
     <title>Site dos Manos</title>
 </head>
 <body>
-    {{>_stars}}
-    {{>_navbar}}
-    {{>_msg}}
-    {{{body}}}
-    
-    {{#each js}}
-        <script src="/js/{{js}}.js"></script>
-    {{else}}
-    {{/each}}
+    <div class = "content">
+        {{>_stars}}
+        {{>_navbar}}
+        {{>_msg}}
+        {{{body}}}
+        
+        {{#each js}}
+            <script src="/js/{{js}}.js"></script>
+        {{else}}
+        {{/each}}
+    </div>
     <footer class = "rodape">
          {{>_rodape}} 
     </footer>
 </body>
+
 </html>
