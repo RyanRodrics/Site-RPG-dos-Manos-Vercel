@@ -303,9 +303,9 @@ router.post('/usuarios/new', (req, res) =>{
     if (!req.body.password || req.body.password==undefined || req.body.password == null){
         erros.push({texto: "password inválida"});
     }
-    if (!(parseInt(req.body.eAdmin) == 0 || parseInt(req.body.eAdmin) == 1)) {
+    /*if (!(parseInt(req.body.eAdmin) == 0 || parseInt(req.body.eAdmin) == 1)) {
         erros.push({texto: "eAdmin inválido"});
-    }
+    }*/
     if(erros.length > 0) {
         res.render("admin/addusuario", {erros: erros, css: [{css: "admin"}]});
     } else {
@@ -327,7 +327,7 @@ router.post('/usuarios/new', (req, res) =>{
                     nickname: req.body.nickname,
                     password: req.body.password,
                     token: req.body.token,
-                    eAdmin: parseInt(req.body.eAdmin),
+                    //eAdmin: parseInt(req.body.eAdmin),
                     gameSaves: {
                         save1: save1,
                         save2: save2,
@@ -386,9 +386,9 @@ router.post('/usuarios/edit', (req, res) =>{
     if (!req.body.password || req.body.password==undefined || req.body.password == null){
         erros.push({texto: "password inválido"});
     }
-    if (!(parseInt(req.body.eAdmin) == 0 || parseInt(req.body.eAdmin) == 1)) {
+    /*if (!(parseInt(req.body.eAdmin) == 0 || parseInt(req.body.eAdmin) == 1)) {
         erros.push({texto: "eAdmin inválido"});
-    }
+    }*/
     if(erros.length > 0) {
         res.render("admin/addusuario", {erros: erros, css: [{css: "admin"}]});
     } else {
@@ -419,7 +419,7 @@ router.post('/usuarios/edit', (req, res) =>{
                         usuario.nickname = req.body.nickname;
                         usuario.password = senhahash;
                         usuario.token = req.body.token;
-                        usuario.eAdmin = parseInt(req.body.eAdmin);
+                        //usuario.eAdmin = parseInt(req.body.eAdmin);
                         usuario.gameSaves = gameSaves;
                         usuario.save().then(() =>{
                             console.log("Usuário editado com sucesso");
