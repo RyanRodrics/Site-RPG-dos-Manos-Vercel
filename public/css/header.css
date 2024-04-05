@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.contentBody{
+    padding-top: 100px;
+}
+
+#headerGeral{
+    display: inline-flex;
+    background-color: #000;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+}
+
+#homelogo{
+    align-items: center;
+    height: 100%;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+}
+
+#homelogo a{
+    height: 70%;
+}
+
+#homelogo a img{
+    height: 100%;
+}
+
+#navbar{
+    position:relative;
+    height: 100%;
+    align-items: center;
+    display: inline-flex;
+}
+
+#navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navbar li{
+    float: left;
+}
+
+#navbar li a{
+    color: white;
+    text-align: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+#navbar li a:hover{
+    background-color: #111;
+}
+
+#navbar li{
+    border-right: 1px solid #bbb;
+}
+  
+#navbar li:last-child{
+    border-right: none;
+}
+
+#loginUser{
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+}
+
+#loginUser button{
+    height: 70%;
+    border-radius: 100%;
+    width: 70%;
+    
+}
+
+#loginUser button img{
+    height: 100%;
+    border-radius: 100%;
+}
+
+

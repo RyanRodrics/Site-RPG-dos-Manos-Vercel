@@ -8,7 +8,7 @@
     {{else}}
     {{/each}}
     <link rel="stylesheet" href="/css/rodape.css">
-    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4045124104921025"
      crossorigin="anonymous"></script>
@@ -16,20 +16,20 @@
     <title>Site dos Manos</title>
 </head>
 <body>
-    <div class = "content">
         {{>_stars}}
         {{>_navbar}}
+    <div class = "contentBody">
         {{>_msg}}
         {{{body}}}
-        
-        {{#each js}}
-            <script src="/js/{{js}}.js"></script>
+        {{#each js}}    
+            <script src="/js/{{js}}.js" type="module"></script>
         {{else}}
         {{/each}}
     </div>
     <footer class = "rodape">
          {{>_rodape}} 
     </footer>
-</body>
 
+    <script src="/js/header.js" type="module"></script>
+</body>
 </html>

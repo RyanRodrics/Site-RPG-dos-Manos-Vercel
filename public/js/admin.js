@@ -1,3 +1,2 @@
 import { navSelect } from "./header.js";
-navSelect("herois2")
-
+navSelect("admin")
