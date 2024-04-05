@@ -7,6 +7,7 @@ import flash from 'connect-flash';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import admin from './routes/admin.js';
+import usuario from './routes/usuario.js';
 import herois2 from './routes/herois2.js';
 
 const app = express();
@@ -72,9 +73,11 @@ app.get('/gamedragon', (req, res) =>{
     res.render("games/gamedragon", {css: [{css: "gamedragon"}], js: [{js: "gamedragon"}]});
 });
 
+app.use('/admin', admin);
+app.use('/usuario', usuario);
 app.use('/herois2', herois2);
 
-app.use('/admin', admin);
+
 
 
 // OUTROS
