@@ -15,9 +15,9 @@ const Passport = function(passport){
                 if(batem) {
                     return done(null, usuario);
                 } else {
-                    return done(null, false, {message: "Senha incorreta"})
+                    return done(null, false, {message: "Senha incorreta"});
                 }
-            })
+            });
         }).catch((err) =>{
 
         })
