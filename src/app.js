@@ -4,6 +4,8 @@ import {engine} from 'express-handlebars';
 import mongoose from 'mongoose';
 import session from 'express-session';
 import flash from 'connect-flash';
+import passport from 'passport';
+//import auth from '../config/auth.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import admin from './routes/admin.js';
@@ -56,6 +58,8 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Midwares
 app.use((req, res , next) =>{
@@ -63,6 +67,7 @@ app.use((req, res , next) =>{
     res.locals.error_msg = req.flash("error_msg");
     next();
 });
+
 
 // ROTAS
 app.get('/', (req, res) =>{
