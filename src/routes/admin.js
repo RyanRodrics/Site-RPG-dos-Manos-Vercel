@@ -13,14 +13,14 @@ const Ficha = mongoose.model("fichas");
 
 // MAIN ADMIN
 router.get('/', (req, res) =>{
-    res.render("admin/admin", {css: [{css: "admmin"}]});
+    res.render("admin/admin", {css: [{css: "admin"}], js: [{js: "admin"}]});
 });
 
 
 // FICHA
 router.get('/fichas', (req, res) =>{
     Ficha.find().sort({date: 'desc'}).lean().then((fichas) =>{
-        res.render("admin/fichas", {fichas: fichas, css: [{css: "admin"}]});
+        res.render("admin/fichas", {fichas: fichas, css: [{css: "admin"}], js: [{js: "admin"}]});
     }).catch((error) =>{
         console.log("Erro ao buscar fichas no banco de dados: " + error);
         req.flash("error_msg", "Erro ao buscar fichas no banco de dados");
@@ -30,7 +30,7 @@ router.get('/fichas', (req, res) =>{
 
 // Adicionar Ficha
 router.get('/fichas/add', (req, res) =>{
-    res.render("admin/addficha", {css: [{css: "admmin"}]});
+    res.render("admin/addficha", {css: [{css: "admin"}], js: [{js: "admin"}]});
 });
 
 router.post('/fichas/new', (req, res) =>{
@@ -142,7 +142,7 @@ router.post('/fichas/new', (req, res) =>{
 // Editar Ficha
 router.get('/fichas/edit/:id', (req, res) =>{
     Ficha.findOne({_id: req.params.id}).lean().then((ficha) =>{
-        res.render("admin/editficha", {ficha: ficha, css: [{css: "admin"}]});
+        res.render("admin/editficha", {ficha: ficha, css: [{css: "admin"}], js: [{js: "admin"}]});
     }).catch((error) =>{
         console.log("Erro ao buscar por ficha " + req.params.id + " :" + error);
         req.flash("error_msg", "Erro ao buscar por ficha " + req.params.id + " :" + error);
@@ -214,7 +214,7 @@ router.post('/fichas/edit', (req, res) =>{
         }
     });
     if (erros.length > 0) {
-        res.render("admin/editficha", {erros: erros, css: [{css: "admin"}]});
+        res.render("admin/editficha", {erros: erros, css: [{css: "admin"}], js: [{js: "admin"}]});
     } else {
         const inventario = {
             armas: armas,
@@ -273,7 +273,7 @@ router.get('/fichas/deletar/:id', (req, res) =>{
 // USUARIO
 router.get('/usuarios', (req, res) =>{
     Usuario.find().sort({date: 'desc'}).lean().then((usuarios) =>{
-        res.render("admin/usuarios", {usuarios: usuarios, css: [{css: "admin"}]});
+        res.render("admin/usuarios", {usuarios: usuarios, css: [{css: "admin"}], js: [{js: "admin"}]});
     }).catch((error) =>{
         console.log("Erro ao buscar usuários no banco de dados: " + error);
         req.flash("error_msg", "Erro ao buscar usuários no banco de dados");
@@ -284,7 +284,7 @@ router.get('/usuarios', (req, res) =>{
 // Adicionar Usuário
 router.get('/usuarios/add', (req, res) =>{
     Ficha.find().sort({date: 'desc'}).lean().then((fichas) =>{
-        res.render("admin/addusuario", {fichas: fichas, css: [{css: "admin"}]});   
+        res.render("admin/addusuario", {fichas: fichas, css: [{css: "admin"}], js: [{js: "admin"}]});   
     }).catch((error) =>{
         console.log("Erro ao listar as fichas: " + error)
         req.flash("error_msg", "Erro ao listar as fichas");
@@ -307,7 +307,7 @@ router.post('/usuarios/new', (req, res) =>{
         erros.push({texto: "eAdmin inválido"});
     }*/
     if(erros.length > 0) {
-        res.render("admin/addusuario", {erros: erros, css: [{css: "admin"}]});
+        res.render("admin/addusuario", {erros: erros, css: [{css: "admin"}], js: [{js: "admin"}]});
     } else {
         Usuario.findOne({username: req.body.username}).lean().then((usuario) =>{
             if (usuario) {
@@ -365,7 +365,7 @@ router.post('/usuarios/new', (req, res) =>{
 router.get('/usuarios/edit/:id', (req, res) =>{
     Usuario.findOne({_id: req.params.id}).lean().then((usuario) =>{
         Ficha.find().sort({date: 'desc'}).lean().then((fichas) =>{
-            res.render("admin/editusuario", {usuario: usuario, fichas: fichas, css: [{css: "admin"}]});
+            res.render("admin/editusuario", {usuario: usuario, fichas: fichas, css: [{css: "admin"}], js: [{js: "admin"}]});
         }).catch((error) =>{
             console.log("Erro ao buscar por usuário " + req.params.id + " :" + error);
             req.flash("error_msg", "Erro ao buscar por usuário " + req.params.id + " :" + error);
@@ -390,7 +390,7 @@ router.post('/usuarios/edit', (req, res) =>{
         erros.push({texto: "eAdmin inválido"});
     }*/
     if(erros.length > 0) {
-        res.render("admin/addusuario", {erros: erros, css: [{css: "admin"}]});
+        res.render("admin/addusuario", {erros: erros, css: [{css: "admin"}], js: [{js: "admin"}]});
     } else {
         let save1 = null;
         if(req.body.save1 != 0) {save1 = new mongoose.Types.ObjectId(req.body.save1);}

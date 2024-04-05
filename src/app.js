@@ -71,7 +71,7 @@ app.use((req, res , next) =>{
 
 // ROTAS
 app.get('/', (req, res) =>{
-    res.render("index", {css: [{css: "main"}]});
+    res.render("index", {css: [{css: "main"}], js: [{js: "index"}]});
 });
 
 app.get('/gamedragon', (req, res) =>{
