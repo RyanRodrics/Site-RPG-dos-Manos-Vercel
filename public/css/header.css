@@ -93,4 +93,12 @@
     border-radius: 100%;
 }
 
+#loginArea{
+    display: none;
+    position: absolute;
+    right:5%;
+    background-color: white;
+    top: calc(100px + 20%);
+}
+
 

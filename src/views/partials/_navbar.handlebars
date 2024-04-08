@@ -11,8 +11,17 @@
         </ul>
     </nav>
     <div id="loginUser">
-        <button>
+        <button id = "loginAbrir">
             <img src="/imgs/tokens/login.png" alt="LOGIN">   
         </button>
+    </div>
+    <div id = "loginArea" >
+        <form action="/usuario/login" method="post">
+            <h2>Usuário:</h2>
+            <input type="text" id = "username">
+            <h2>Senha:</h2>
+            <input type="text" id = "password">
+            <button type="submit">ENTRAR</button>
+        </form>
     </div>
 </header>

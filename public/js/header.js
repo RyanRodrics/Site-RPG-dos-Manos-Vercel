@@ -8,3 +8,16 @@ export function navSelect(url){
         }
     })
 }
+const loginArea = document.querySelector("#loginArea");
+const loginButton = document.querySelector("#loginAbrir");
+
+
+loginButton.onclick = () =>{
+    if(loginArea.style.display == "flex"){
+        loginArea.style.display = "none";
+    }else{
+        loginArea.style.display = "flex";
+        
+    }
+    
+}
