@@ -25,7 +25,7 @@ router.post('/login', (req, res, next) =>{
         successRedirect: "/",
         failureRedirect: "/usuario",
         failureFlash: true
-    })(req, res, next)
-})
+    })(req, res, next);
+});
 
 export default router;
