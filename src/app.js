@@ -5,7 +5,8 @@ import mongoose from 'mongoose';
 import session from 'express-session';
 import flash from 'connect-flash';
 import passport from 'passport';
-//import auth from '../config/auth.js';
+import auth from '../config/auth.js';
+auth(passport);
 import path from 'path';
 import { fileURLToPath } from 'url';
 import admin from './routes/admin.js';
@@ -57,14 +58,16 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
-app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 
 // Midwares
 app.use((req, res , next) =>{
     res.locals.success_msg = req.flash("success_msg");
     res.locals.error_msg = req.flash("error_msg");
+    res.locals.error = req.flash("error");
+    res.locals.user = req.user || null;
     next();
 });
 
