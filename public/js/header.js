@@ -5,6 +5,7 @@ export function navSelect(url){
         console.log(nav.href)
         if(nav.href==navArray[0]+url){
             nav.style.backgroundColor="#820101"
+            nav.style.fontWeight="500"
         }
     })
 }
@@ -94,27 +95,8 @@ export function navSelect(url){
        
     }
     mudarSenha.onclick = mudar_senha;
-    // const registro_display = document.querySelector("#register");
-    // const voltarRegister = document.querySelector("#voltarLogoutRegister");
-    // const voltarLogout = document.querySelector("#voltarLogout");
-    // function voltar_Logout(){
-    //     mudar_senha1.value = "";
-    //     mudar_senha2.value = "";
-    //     logout.style.display = "block";
-    //     registro_display.display = "none";
-    //     mudar_senha_display.style.display = "none";
-    // }
-    // voltarLogout.onclick = voltar_Logout;
+    const registro_display = document.querySelector("#register");
     
-    // function voltar_register(){
-    //     registro_display.style.display = "none";
-    //     inputs.style.display = "block";
-    //     registrar_usuario.value = "";
-    //     registrar_senha1.value = "";
-    //     registrar_senha2.value = "";
-    //     login_tela.style.height = "250px";
-    // }
-    // voltarRegister.onclick = voltar_register;
     
     const registro_display_butao = document.querySelector("#registro-display");
    
