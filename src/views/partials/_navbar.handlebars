@@ -11,17 +11,80 @@
         </ul>
     </nav>
     <div id="loginUser">
-        <button id = "loginAbrir">
+        <button id = "login">
             <img src="/imgs/tokens/login.png" alt="LOGIN">   
         </button>
     </div>
-    <div id = "loginArea" >
-        <form action="/usuario/login" method="post">
-            <h2>Usuário:</h2>
-            <input type="text" id = "username">
-            <h2>Senha:</h2>
-            <input type="text" id = "password">
-            <button type="submit">ENTRAR</button>
-        </form>
+    <div id = "tela-login">
+            <form action="/usuario/login" method="post">
+                <ul type = "none" id = "inputs">
+                    
+                        <li>
+                            <h4>USUARIO:</h4>
+                            <input type="text" id="inputUsuario" name="username">
+                        </li>
+                        <li>
+                            <h4>SENHA:</h4>
+                            <input type="password" id ="inputSenha" name="password">
+                        </li>
+                        <li id = "login-button">
+                            <button id="entrar" type="submit">Entrar</button>
+                            <button id = "registro-display">Sem cadastro?</button>
+                        </li>
+                    
+                </ul>
+            </form>
+            <ul type = "none" id = "logout">
+                <li>
+                    <p>Bem vindo, <strong class="nome"></strong>.</p>
+                </li>
+                <li id = "imagem-perfil">
+                    <button id="token_0"><img  class="tokens"></button>
+                    <button id="token_1"><img  class="tokens"></button>
+                    <button id="token_2"><img  class="tokens"></button>
+                    <button id="token_3"><img  class="tokens"></button>
+                </li>
+                <li id = "logado-buttons">
+                    <button id = "logout-button">Sair</button>
+                    <button id = "change-password">Mudar senha</button>
+                </li>        
+            </ul>
+            <ul type = "none" id = "mudar_senha">
+                
+                    <li>
+                        <h4>NOVA SENHA:</h4>
+                        <input type="text" id="mudarSenha1">
+                    </li>
+                    <li>
+                        <h4>CONFIRMAR SENHA:</h4>
+                        <input type="text" id ="mudarSenha2">
+                    </li>
+                    <li id = "butoes_mudar_senha">
+                        <button id="mudarSenha">Mudar Senha</button>
+                        <button id = "voltarLogout">Voltar</button>
+                    </li>
+                
+            </ul>
+            <ul type = "none" id = "register">
+                
+                <li>
+                    <h4>SEU NOVO USUARIO:</h4>
+                    <input type="text" id="registerUsuario">
+                </li>
+                <li>
+                    <h4>SUA SENHA:</h4>
+                    <input type="text" id ="registerSenha1">
+                </li>
+                <li>
+                    <h4>CONFIRMAR SUA SENHA:</h4>
+                    <input type="text" id ="registerSenha2">
+                </li>
+                
+                <li id = "register-button">
+                    <button id = "registrar">Registrar</button>
+                    <button id = "voltarLogoutRegister">Voltar</button>
+                </li>
+            
+        </ul>
     </div>
 </header>

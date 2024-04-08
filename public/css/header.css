@@ -93,12 +93,190 @@
     border-radius: 100%;
 }
 
-#loginArea{
-    display: none;
+#tela-login{
     position: absolute;
-    right:5%;
-    background-color: white;
-    top: calc(100px + 20%);
+    width: 300px;
+    height: 250px;
+    right: 0;
+    background-color: lightgray;
+    margin-top: 150px;
+    margin-right: 50px;
+    display: none;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid lightgray;
 }
+#tela-login ul{
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+#tela-login ul li{
+    margin-bottom: 5%;
+}
+#tela-login ul li h4{
+    text-align: left;
+    font-size: 20px;
+    font-family: Impact;
+    font-weight: lighter;
+}
+#tela-login ul li input{
+    height: 25px;
+    width: 100%;
+    font-size: 16px;
+}
+#tela-login ul #login-button{
+    display: grid;
+    margin-bottom: 5%;
+    text-align: center;
+    width: 100%;
+    justify-items: center;
+}
+#tela-login ul li #entrar{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    color: lightgray;
+    background-color: red;
+    width: 100%;
+}
+#tela-login ul li #registro-display{
+    margin-bottom: 5%;
+    padding: 5px;
+    font-weight: lighter;
+    font-size: 12px;
+    background-color: grey;
+    color: lightgray;
+    display:block;
+    width: 50%;
+    margin-top: 2%;
+}
+#tela-login #logout{
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    justify-content: center;
+    text-align: center;
+}
+#tela-login #logout li{
+    margin:0;
+}
+#tela-login #logout p{
+    font-weight: lighter;
+    font-family: Impact;
+    margin-top: 5%;
+    font-size: 32px;
+    margin-bottom: 2%;
+}
+#tela-login #logout #imagem-perfil{
+    margin: 0;
+}
+#tela-login #logout #imagem-perfil button{
+    border-radius: 100%;
+    border: 1px solid black;
+}
+#tela-login #logout #imagem-perfil .tokens{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+#tela-login #logout #logado-buttons{
+    display: inline;
+    bottom:0;
+}
+#tela-login #logout #logado-buttons button{
+    width: 50%;
+    margin-top: 2%;
 
+}
+#tela-login #logout #logout-button{
+    bottom: 20%;
+    padding: 10px;
+    font-weight: lighter;
+    font-size: 20px;
+    background-color: red;
+    color: lightgray;
+}
+#tela-login #logout #change-password{
+    margin-bottom: 5%;
+    padding: 5px;
+    font-weight: lighter;
+    font-size: 12px;
+    background-color: grey;
+    color: lightgray;
+}
+#tela-login #mudar_senha{
+    display: none;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+#tela-login #mudar_senha #butoes_mudar_senha{
+    display: grid;
+    margin-bottom: 5%;
+    text-align: center;
+    width: 100%;
+    justify-items: center;
+}
+#tela-login #mudar_senha #mudarSenha{
+    margin-bottom: 5%;
+    padding: 5px;
+    font-weight: lighter;
+    font-size: 12px;
+    background-color: red;
+    color: lightgray;
+    display:block;
+    width: 50%;
+}
+#tela-login #mudar_senha #voltarLogout{
+    margin-bottom: 5%;
+    padding: 5px;
+    font-weight: lighter;
+    font-size: 20px;
+    background-color: grey;
+    color: lightgray;
+    width: 100%;
+}
+#tela-login #register{
+    display: none;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+#tela-login #register li h4{
+    text-align: left;
+    font-size: 20px;
+    font-family: Impact;
+    font-weight: lighter;
+}
+#tela-login #register #register-button{
+    display: grid;
+    margin-bottom: 5%;
+    text-align: center;
+    width: 100%;
+    justify-items: center;
+}
+#tela-login #register #register-button #registrar{
+    margin-bottom: 5%;
+    padding: 5px;
+    font-weight: lighter;
+    font-size: 12px;
+    background-color: red;
+    color: lightgray;
+    display:block;
+    width: 50%;
+}
+#tela-login #register #register-button #voltarLogoutRegister{
+    margin-bottom: 5%;
+    padding: 5px;
+    font-weight: lighter;
+    font-size: 12px;
+    background-color: grey;
+    color: lightgray;
+    width: 100%;
+}
+.nome{
+    font-weight: lighter;
+}   
 
