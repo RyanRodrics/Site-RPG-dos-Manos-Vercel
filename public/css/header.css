@@ -4,6 +4,15 @@
     
 }
 
+
+
+.rubik-teste {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
 .contentBody{
     padding-top: 100px;
 }
@@ -37,6 +46,12 @@
     height: 100%;
     align-items: center;
     display: inline-flex;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+
 }
 
 #navbar ul{
@@ -60,7 +75,8 @@
 }
 
 #navbar li a:hover{
-    background-color: #111;
+    background-color: #252525;
+    font-weight: 500;
 }
 
 #navbar li{
@@ -99,8 +115,8 @@
     height: 250px;
     right: 0;
     background-color: lightgray;
-    margin-top: 150px;
-    margin-right: 50px;
+    margin-top: 105px;
+    margin-right: 5px;
     display: none;
     align-items: center;
     border-radius: 20px;
@@ -145,8 +161,10 @@
     padding: 5px;
     font-weight: lighter;
     font-size: 12px;
-    background-color: grey;
+    background-color: darkslategray;
+    text-decoration: none;
     color: lightgray;
+    border: black solid 1px ;
     display:block;
     width: 50%;
     margin-top: 2%;
