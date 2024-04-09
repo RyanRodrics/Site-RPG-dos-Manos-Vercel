@@ -74,7 +74,14 @@ app.use((req, res , next) =>{
 
 // ROTAS
 app.get('/', (req, res) =>{
-    res.render("index", {css: [{css: "main"}], js: [{js: "index"}]});
+    let user;
+    if (req.user) {
+        user = {
+            nickname: req.user.nickname
+        };
+    }
+    else {user = req.user;}
+    res.render("index", {css: [{css: "main"}], js: [{js: "index"}], user: user});
 });
 
 app.get('/gamedragon', (req, res) =>{

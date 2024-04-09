@@ -1,1 +1,12 @@
 <h1>Site em desenvolvimento</h1>
+<h1>{{user.nickname}}</h1>
+{{#if user}}
+    <h1>{{user.nickname}}</h1>
+    <input type="hidden" id="inputuser" value="{{user.nickname}}">
+    <script>
+        const name = document.getElementById("inputuser").value;
+        console.log(`${name}`);
+        alert(`Bem-vindo ${name}`);
+    </script>
+{{else}}
+{{/if}}
