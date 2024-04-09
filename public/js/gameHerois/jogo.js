@@ -69,7 +69,7 @@ function salvar_mapaAnterior(mapinha){
             mapaAnterior = "/imgs/gameHerois/mapaHerois2020.png";
             break;
         case "Denji":
-            mapaAnterior = "/imgs/gameHerois/apartamentoDenji.png";
+            mapaAnterior = "/imgs/gameHerois/denji/apartamentoDenji.png";
             break;
 
 

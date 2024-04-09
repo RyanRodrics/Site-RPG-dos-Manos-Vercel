@@ -21,7 +21,7 @@ import { mudarButoes,mudarEscolhas,mudarFala,leave } from "../jogo.js";
 //funções auxiliares
 function mudarSprite(valor){
     if(valor >= 0){
-    imagem_sprite_Denji.src = `./imagens/denji/sprites/denji_sprite_${valor}.png`;
+    imagem_sprite_Denji.src = `/imgs/gameHerois/denji/sprites/denji_sprite_${valor}.png`;
     }else{
         imagem_sprite_Denji.src = "";
     }

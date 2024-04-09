@@ -111,10 +111,10 @@ let verificaCompraVenda;
 export function criarLoja(){
     let checkBox = compraVenda.checked? true: false;
     armasImagens.forEach((element,index) => {
-        element.src = `./imagens/loja/itens/${guns[index].type}.png`;
+        element.src = `/imgs/gameHerois/loja/itens/${guns[index].type}.png`;
     });
     armadurasImagens.forEach((element,index) => {
-        element.src = `./imagens/loja/itens/${armors[index].name}.png`;
+        element.src = `/imgs/gameHerois/loja/itens/${armors[index].name}.png`;
     });
     armasNome.forEach((element,index) =>{
         element.innerText = guns[index].type;
