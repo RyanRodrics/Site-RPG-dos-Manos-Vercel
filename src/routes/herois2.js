@@ -15,10 +15,10 @@ router.get('/', (req, res) =>{
 });
 router.get('/game',(req,res) => {
     console.log(req.user);
-    res.render("games/gameHerois",{css:[{css:"gameHerois/load" },{css:"gameHerois/criacao"},{css:"gameHerois/jogo"}], js:[{js:"gameHerois/load"},{js: "gameHerois/buildLoad"}], user: req.user,stars:"EXISTO"});
+    res.render("games/gameHerois/loads",{css:[{css:"gameHerois/load" },{css:"gameHerois/criacao"},{css:"gameHerois/jogo"}], js:[{js:"gameHerois/load"},{js: "gameHerois/buildLoad"}], user: req.user,stars:"EXISTO"});
 });
 router.get('/game/play',(req,res) => {
-    res.render("gameplay",{css:[{css:"" }], js:[{js:""}]});
+    res.render("games/gameHerois/play",{css:[{css:"gameHerois/load" },{css:"gameHerois/criacao"},{css:"gameHerois/jogo"}], js:[{js:"gameHerois/classes"},{js:"gameHerois/criacao"},{js:"gameHerois/jogo"},{js:"gameHerois/criacao"}], user: req.user,stars:"EXISTO"});
 });
 
 export default router;

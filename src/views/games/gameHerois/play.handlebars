@@ -1,0 +1,211 @@
+<div id = "display-jogo">
+    <div id = "criacao-de-personagem">
+        <h2>CRIAÇÃO DE PERSONAGEM</h2>
+        <h3>NOME:</h3>
+        
+            
+            <input type="text" name="Nickname" id="nickname">
+            <select name="AtributoPrincipal" id="atributoPrincipal">
+                <option value="selecionePricipal">Selecione seu atributo principal (+2)</option>
+                <option value="0">Força (+2)</option>
+                <option value="1">Destreza (+2)</option>
+                <option value="2">Constituição (+2)</option>
+                <option value="3">Inteligência (+2)</option>
+                <option value="4">Sabedoria (+2)</option>
+                <option value="5">Carisma (+2)</option>
+            </select>
+            <select name="AtributoSecundario" id="atributoSecundario">
+                <option value="selecioneSecundario">Selecione seu atributo secundario (+1)</option>
+                <option value="0">Força (+1)</option>
+                <option value="1">Destreza (+1)</option>
+                <option value="2">Constituição (+1)</option>
+                <option value="3">Inteligência (+1)</option>
+                <option value="4">Sabedoria (+1)</option>
+                <option value="5">Carisma (+1)</option>
+            </select>
+            <select name="gênero" id="atributoGenero">
+                <option value="selecioneGenero">Escolha seu gênero</option>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+                <option value="N">Não informar</option>
+            </select>
+            
+            
+        <label><h2>Pontos de atributos: <p id="pontos-de-atributos">27</p></h2></label>
+        
+        <ul id = "distribuicaoAtributos" type = "none">
+            <li class="atributos">
+                
+                <h3>Força:</h3>
+                <div class = "butaoAtributos">
+
+                    <button class = "diminuirAtributo" id = "diminuirFor">-</button>
+                <div class = "displayAtributos">
+                        <p class="valorAtributo" id = "valorForca">8 </p>
+                        <p>&lpar; <bdi class = "modAtributo">-1</bdi> &rpar;</p> 
+                    </div>
+                    <button class = "aumentarAtributo" id = "aumentarFor">+</button>
+                </div>
+            </li>
+            <li class="atributos">
+                
+                <h3>Destreza:</h3>
+                <div class = "butaoAtributos">
+
+                    <button class = "diminuirAtributo" id = "diminuirDex">-</button>
+                    <div class = "displayAtributos">
+                        <p class="valorAtributo">8</p>
+                        <p>&lpar; <bdi class = "modAtributo">-1</bdi> &rpar;</p> 
+                    </div>
+                    <button class = "aumentarAtributo" id = "aumentarDex">+</button>
+                </div>
+            </li>
+            <li class="atributos">
+                
+                <h3>Constituição:</h3>
+                <div class = "butaoAtributos">
+
+                    <button class = "diminuirAtributo" id = "diminuirCon">-</button>
+
+                    <div class = "displayAtributos">
+                        <p class="valorAtributo">8</p>
+                        <p>&lpar; <bdi class = "modAtributo">-1</bdi> &rpar;</p> 
+                    </div>
+                    <button class = "aumentarAtributo" id = "aumentarCon">+</button>
+                </div>
+            </li>
+            <li class="atributos">
+                
+                <h3>Inteligência:</h3>
+                <div class = "butaoAtributos">
+
+                    <button class = "diminuirAtributo"id = "diminuirInt">-</button>
+                    <div class = "displayAtributos">
+                        <p class="valorAtributo">8</p>
+                        <p>&lpar; <bdi class = "modAtributo">-1</bdi> &rpar;</p> 
+                    </div>
+                    <button class = "aumentarAtributo" id = "aumentarInt">+</button>
+                </div>
+            </li>
+            <li class="atributos">
+                
+                <h3>Sabedoria:</h3>
+                <div class = "butaoAtributos">
+
+                    <button class = "diminuirAtributo" id = "diminuirSab">-</button>
+                    <div class = "displayAtributos">
+                        <p class="valorAtributo">8</p>
+                        <p>&lpar; <bdi class = "modAtributo">-1</bdi> &rpar;</p> 
+                    </div>
+                    <button class = "aumentarAtributo" id = "aumentarSab">+</button>
+                </div>
+            </li>
+            <li class="atributos">
+                
+                <h3>Carisma:</h3>
+                <div class = "butaoAtributos">
+
+                    <button class = "diminuirAtributo" id = "diminuirCar">-</button>
+                    <div class = "displayAtributos">
+                        <p class="valorAtributo">8</p>
+                        <p>&lpar; <bdi class = "modAtributo">-1</bdi> &rpar;</p> 
+                    </div>
+                    <button class = "aumentarAtributo" id = "aumentarCar">+</button>
+                </div>
+            </li>
+        </ul>
+        <div id = "local-butao-criar-prota">
+            <button id = "criar-prota">Começar!</button>
+            
+        </div>
+    </div>
+    
+    <div id = "jogo">
+        
+        
+        <div id = "inicio-mapa">
+            <button id = "irPara_Loja" class = "irPara"> <img src="/imgs/gameHerois/loja/lojaToken.png" alt=""></button>
+            <button id = "irPara_Denji" class = "irPara"><img src="/imgs/gameHerois/denji/token_2.webp" alt=""></button>
+        </div>
+        <div id = "sprites">
+            
+            <img src="/imgs/gameHerois/denji/sprites/denji_sprite_4.png" alt="">
+            <div id = "barraHP"><div></div><p>T<br>E<br>S<br>T<br>E<br></p></div>
+            <div id = "barraREP"><div></div><p>Reputação</p></div>
+            <div id = "barraINIMIGO"><div></div><p>INIMIGO</p></div>
+        </div>
+        <div id = "falas">
+            <p id = "textoFala"></p>
+            <div id = "escolhas">
+                <button id ="escolha-1"></button>
+                <button id = "escolha-2"></button>
+                <button id = "escolha-3"></button>
+            </div>
+        </div>
+        <a id = "abrir-inventario"><img src="/imgs/gameHerois/login.png" alt=""></a>
+        <div id = "inventario">
+            <h2 id = "inv-nome" class = "inv-texto"></h2>
+            <ul type = "none" id = "inv-atributos" class = "inv-texto">
+                <li id="inv-for" ></li>
+                <li id="inv-dex" ></li>
+                <li id="inv-con" ></li>
+                <li id="inv-int" ></li>
+                <li id="inv-sab" ></li>
+                <li id="inv-car" ></li>
+            </ul>
+            <h3 id = "inv-CA" class = "inv-texto"></h3>
+            <h3 id = "inv-HP" class = "inv-texto"></h3>
+            <h3 id = "inv-LVL" class = "inv-texto"></h3>
+            <h3 id = "inv-GEN" class = "inv-texto"></h3>
+            <h3 id = "inv-money"class="inv-texto"><p id = "inv-money-value"></p>&#x1FA99;</h3>
+            <ol id = "inv-itens" class = "inv-texto" type ="none">
+                <li class = "inv-arma" >Nome | Dano | Valor | Atr</li>
+                <li><button class = "inv-itens-subir">&#128070;</button><p class = "inv-arma"></p> <button class = "inv-itens-descer">&#128071;</button></li>
+                <li><button class = "inv-itens-subir">&#128070;</button> <p class = "inv-arma"></p> <button class = "inv-itens-descer">&#128071;</button></li>
+                <li><button class = "inv-itens-subir">&#128070;</button> <p class = "inv-arma"></p> <button class = "inv-itens-descer">&#128071;</button></li>
+                <li><button class = "inv-itens-subir">&#128070;</button> <p class = "inv-arma"></p> <button class = "inv-itens-descer">&#128071;</button></li>
+                <li><button class = "inv-itens-subir">&#128070;</button> <p class = "inv-arma"></p> <button class = "inv-itens-descer">&#128071;</button></li>
+            </ol>
+            <ul id = "inv-itens-armadura" class = "inv-texto" type ="none" >
+                <li class = "inv-armadura" >Nome | Proteção | Valor | Tipo</li>
+                <li><p class = "inv-armadura" id = "inv-item-armadura">PENIS</p></li>
+            </ul>
+            
+        </div>
+        <div id = "loja">
+            <h2 id = "loja-dinheiro"><p id = "loja-dinheiro-value"></p>&#x1FA99;</h2>
+            <h2 id = "armamento">ARMAMENTO</h2>
+            <ul id = "loja-armas" type = "none">
+                <li class = "loja-itens-armas"><button class = "loja-button-compraVenda"><img src="" alt=""  class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armas"><button class = "loja-button-compraVenda"><img src="" alt=""  class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armas"><button class = "loja-button-compraVenda"><img src="" alt=""  class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armas"><button class = "loja-button-compraVenda"><img src="" alt=""  class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armas"><button class = "loja-button-compraVenda"><img src="" alt=""  class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armas"><button class = "loja-button-compraVenda"><img src="" alt=""  class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armas"><button class = "loja-button-compraVenda"><img src="" alt=""  class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armas"><button class = "loja-button-compraVenda"><img src="" alt=""  class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armas"><button class = "loja-button-compraVenda"><img src="" alt=""  class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p class = "loja-itens-value">VALOR</p></button></li>
+            </ul>
+            <hr/>
+            <h2 id = "protecao">PROTEÇÃO</h2>
+            <ul id = "loja-armadura" type = "none">
+                <li class = "loja-itens-armaduras"><button class = "loja-button-compraVenda"><img src="" alt="" class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p  class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armaduras"><button class = "loja-button-compraVenda"><img src="" alt="" class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p  class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armaduras"><button class = "loja-button-compraVenda"><img src="" alt="" class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p  class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armaduras"><button class = "loja-button-compraVenda"><img src="" alt="" class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p  class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armaduras"><button class = "loja-button-compraVenda"><img src="" alt="" class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p  class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armaduras"><button class = "loja-button-compraVenda"><img src="" alt="" class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p  class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armaduras"><button class = "loja-button-compraVenda"><img src="" alt="" class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p  class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armaduras"><button class = "loja-button-compraVenda"><img src="" alt="" class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p  class = "loja-itens-value">VALOR</p></button></li>
+                <li class = "loja-itens-armaduras"><button class = "loja-button-compraVenda"><img src="" alt="" class = "loja-itens-imagens"><p class="loja-itens-nome">NOME</p><p  class = "loja-itens-value">VALOR</p></button></li>
+            </ul>
+            <div id = "loja-mudar-modo">
+                <h3 bottom ="5%" >COMPRA</h3>
+                <input type="checkbox" id = "loja-vender" class="switch switch--shadow"><label for="loja-vender"></label></input>
+                <h3>VENDA</h3>
+            </div>
+            <button id = "loja-sair">SAIR</button>
+        </div>
+    </div>
+    
+</div>

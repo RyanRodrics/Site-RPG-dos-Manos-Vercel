@@ -9,7 +9,8 @@ const texto_fala = document.querySelector("#textoFala");
 const escolha_1 = document.querySelector("#escolha-1");
 const escolha_2 = document.querySelector("#escolha-2");
 const escolha_3 = document.querySelector("#escolha-3");
-
+import { navSelect } from "../header.js";
+navSelect("herois2");
 
 import {jogador} from "./criacao.js";
 export {mudarButoes,mudarEscolhas,mudarFala, leave};
@@ -51,7 +52,7 @@ function leave(){
     sprites.style.display = "none";
     loja.style.display ="none";
     mapa.style.display = "flex";
-    jogo.style.backgroundImage = "url(./imagens/mapaHerois2020.png)";
+    jogo.style.backgroundImage = "url(/imgs/gameHerois/mapaHerois2020.png)";
     salvar_mapaAnterior("Mapa");
 }
 //abrindo inventario
@@ -62,28 +63,28 @@ const inventario = document.querySelector("#inventario");
 function salvar_mapaAnterior(mapinha){
     switch(mapinha){
         case "Loja":
-            mapaAnterior = "./imagens/loja/lojaCatalogo.png";
+            mapaAnterior = "/imgs/gameHerois/loja/lojaCatalogo.png";
             break;
         case "Mapa":
-            mapaAnterior = "./imagens/mapaHerois2020.png";
+            mapaAnterior = "/imgs/gameHerois/mapaHerois2020.png";
             break;
         case "Denji":
-            mapaAnterior = "./imagens/denji/apartamentoDenji.png";
+            mapaAnterior = "/imgs/gameHerois/apartamentoDenji.png";
             break;
 
 
         default:
-            mapaAnterior = "./imagens/mapaHerois2020.png";
+            mapaAnterior = "/imgs/gameHerois/mapaHerois2020.png";
             break;
     }
 }
 function abrindo_inventario (){
     if(inventario.style.display == "flex"){
         inventario.style.display = "none";
-        if(mapaAnterior == "./imagens/mapaHerois2020.png") {
+        if(mapaAnterior == "/imgs/gameHerois/mapaHerois2020.png") {
             mapa.style.display = "flex";
         }
-        if(mapaAnterior == "./imagens/loja/lojaCatalogo.png"){
+        if(mapaAnterior == "/imgs/gameHerois/loja/lojaCatalogo.png"){
             loja.style.display = "flex";
         }
         if(falaAberto){
@@ -106,7 +107,7 @@ function abrindo_inventario (){
         if(loja.style.display == "flex"){
             loja.style.display = "none";
         }
-        jogo.style.backgroundImage = "url(./imagens/fichaHerois.png)";
+        jogo.style.backgroundImage = "url(/imgs/gameHerois/fichaHerois.png)";
         criarFicha();
         salvarFala = texto_fala.innerText;
         salvarEscolhas = [escolha_1.innerText,escolha_2.innerText,escolha_3.innerText];
@@ -120,7 +121,7 @@ import { criarLoja } from "./loja.js";
 const irLoja = document.querySelector("#irPara_Loja");
 function indoParaLoja(){
     mapa.style.display = "none";
-    jogo.style.backgroundImage = "url(./imagens/loja/lojaCatalogo.png)";
+    jogo.style.backgroundImage = "url(/imgs/gameHerois/loja/lojaCatalogo.png)";
     loja.style.display ="flex";
     salvar_mapaAnterior("Loja");
     criarLoja();
@@ -131,7 +132,7 @@ import { falando_Denji } from "./personagens/irDenji.js";
 const irDenji = document.querySelector("#irPara_Denji");
 function indoParaDenji(){
     mapa.style.display = "none";
-    jogo.style.backgroundImage = "url(./imagens/denji/apartamentoDenji.png)";
+    jogo.style.backgroundImage = "url(/imgs/gameHerois/denji/apartamentoDenji.png)";
     salvar_mapaAnterior("Denji");
     falando_Denji();
 }
