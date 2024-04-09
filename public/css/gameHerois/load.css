@@ -1,0 +1,40 @@
+#carregar-save{
+    display: flex; /*flex;*/
+    text-align: center;
+    width: 1080px;
+    height: 720px;
+    background-image: url("/imgs/gameHerois/criacaoPersonagem.png");
+    font-family: Impact;
+    color:white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    position: relative;
+}
+#carregar-save h2{
+    top: 12%;
+    position: absolute;
+    height: min-content;
+    justify-self: center;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    text-decoration: underline white;
+}
+#save-lista{
+    left: 13%;
+    width: 74%;
+    display: flex;
+    position: absolute;
+    top: 25%;
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#save-lista li button{
+    width: 400px;
+    height: 50px;
+    cursor:pointer;
+}
+#save-lista li button h3{
+    font-size:20px;
+}

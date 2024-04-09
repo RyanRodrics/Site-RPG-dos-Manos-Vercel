@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+
+#some{
+    display: none;
+}
+#criacao-de-personagem{
+    display: flex; /*flex;*/
+    text-align: center;
+    width: 1080px;
+    height: 720px;
+    background-image: url("./imagens/criacaoPersonagem.png");
+    font-family: Impact;
+    color:white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    position: absolute;
+}
+
+#criacao-de-personagem  h2{
+    top: 12%;
+    position: absolute;
+    height: min-content;
+    justify-self: center;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    text-decoration: underline white;
+}
+
+#criacao-de-personagem  h3{
+    text-align: left;
+    top:20%;
+    left: 20%;
+    position: absolute;
+    height: min-content;
+    font-size: 26px;
+}
+
+
+#criacao-de-personagem  #nickname{
+    width: 350px;
+    font-size: 26px;
+    font-family: Impact;
+    margin-top: 0;
+    text-align: center;
+    top:20%;
+    left: 27%;
+    position: absolute;
+    color: grey;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+#criacao-de-personagem #atributoPrincipal{
+    width: max-content;
+    position: absolute;
+    top: 27%;
+    left: 20%;
+    font-family: sans-serif;
+    color:black;
+    font-size: 16px;
+    cursor:pointer;
+}
+#criacao-de-personagem #atributoSecundario{
+    width: max-content;
+    position: absolute;
+    top: 27%;
+    right: 20%;
+    cursor:pointer;
+    font-family: sans-serif;
+    color:black;
+    font-size: 16px;
+    
+}
+#criacao-de-personagem #atributoGenero{
+    cursor:pointer;
+    width: max-content;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    font-family: sans-serif;
+    color:black;
+    font-size: 16px;
+}
+#criacao-de-personagem label{
+    display: flex;
+    position: absolute;
+    top: 32%;
+    width: 100%;
+
+}
+#criacao-de-personagem label h2{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+#distribuicaoAtributos{
+    display: flex;
+    justify-content: center;
+    top: 38%;
+    position: absolute;
+    width: 73%;
+    flex-wrap: wrap;
+    left: 14%;
+    
+}
+#distribuicaoAtributos .atributos{
+    margin: 5px 50px;
+    justify-content: center;
+    border-radius: 20px;
+    border: 2px solid goldenrod;
+    background-color:rgba(100, 100,100, 30%);
+    width: 125px;
+    height: 125px;
+    padding: 10px;
+    
+    
+}
+#distribuicaoAtributos .atributos h3{
+    margin-bottom: 10px;
+    text-align: center;
+    position: static;
+    font-size: 22px;
+}
+#distribuicaoAtributos .atributos  .butaoAtributos{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#distribuicaoAtributos .atributos .butaoAtributos .displayAtributos{
+    display: block;
+    justify-content: center;
+}
+#distribuicaoAtributos .atributos .butaoAtributos .displayAtributos .valorAtributo{
+    display: inline-block;
+
+}
+#distribuicaoAtributos .atributos  .butaoAtributos p{
+    font-size: 26px;
+    font-weight: bolder;
+    font-family: impact;
+    text-align: center;
+    margin-top:0 ;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 60px;
+    
+}
+#distribuicaoAtributos .atributos  .butaoAtributos button{
+    text-align: center;
+    font-size: 16px;
+    height: min-content ;
+    width: 15%;
+    cursor:pointer;
+    margin-top: 5px;
+}
+#criacao-de-personagem #local-butao-criar-prota{
+    width: 100%;
+    height: 8%;
+    position: absolute;
+    bottom: 5.7%;;
+    display: flex;
+    justify-content: center;
+    
+}
+#criacao-de-personagem #criar-prota{
+    position: absolute;
+    cursor:pointer;
+    width: 30%;
+    font-size: xx-large;
+    justify-self: center;
+    background-color: gold;
+    color: white;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+#criacao-de-personagem #criar-prota:hover{
+    background-color: goldenrod;
+}
+#criar-teste{
+    position: absolute;
+    width: 30%;
+    font-size: xx-large;
+    justify-self: center;
+    background-color: orangered;
+    color: white;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    bottom: 0;
+    cursor:pointer;
+    right:35%;
+}
+@media (max-width:1080px ) {
+    #jogo , #criacao-de-personagem{
+        transform: scale(0.3);
+    }
+    #display-jogo{
+        height: 100%;
+        width: 100%;
+        margin-top: 10%;
+    }
+    
+}
+

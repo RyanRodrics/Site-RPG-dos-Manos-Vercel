@@ -1,0 +1,657 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --estrelinhas: 
+    57.36vw 86.83vh lightgray,34.14vw 42.08vh lightgray,33.08vw 35.8vh lightgray,22.23vw 54.27vh lightgray,36.89vw 86.53vh lightgray,82.75vw 1.78vh lightgray,4.1vw 14.81vh lightgray,81.41vw 54.1vh lightgray,91.32vw 22.18vh lightgray,54.06vw 6.08vh lightgray,65.8vw 34.06vh lightgray,77.88vw 74.57vh lightgray,44vw 13.06vh lightgray,75.19vw 55.05vh lightgray,14.43vw 4.39vh lightgray,83vw 25.02vh lightgray,75.7vw 38.14vh lightgray,6.7vw 61.71vh lightgray,0.25vw 15.41vh lightgray,81.89vw 75.98vh lightgray,29.84vw 36.35vh lightgray,29.78vw 51.74vh lightgray,92.53vw 67.69vh lightgray,32.04vw 32.28vh lightgray,18.62vw 14.14vh lightgray,27.83vw 33.17vh lightgray,52.08vw 73.89vh lightgray,39.12vw 82.77vh lightgray,37.44vw 32.32vh lightgray,96.4vw 21.11vh lightgray,95.56vw 27.08vh lightgray,79.84vw 18.42vh lightgray,33.56vw 41.23vh lightgray,81.81vw 65.75vh lightgray,60.06vw 4.42vh lightgray,59.09vw 40.58vh lightgray,64.41vw 33vh lightgray,20.22vw 16.97vh lightgray,14.87vw 21.91vh lightgray,45.27vw 28.39vh lightgray,25.48vw 57.6vh lightgray,97.03vw 43.45vh lightgray,24.31vw 70.63vh lightgray,50.9vw 26.24vh lightgray,85.35vw 16.54vh lightgray,62.84vw 47.55vh lightgray,47.56vw 36.74vh lightgray,90.82vw 38.9vh lightgray,66.98vw 30.85vh lightgray,44.6vw 28.77vh lightgray,71.76vw 83.53vh lightgray,45.51vw 8.92vh lightgray,9.83vw 78.46vh lightgray,46.09vw 35.93vh lightgray,17.34vw 63.21vh lightgray,8.29vw 19.46vh lightgray,5.89vw 21.41vh lightgray,29.57vw 80.68vh lightgray,8.9vw 39.57vh lightgray,59.14vw 8.09vh lightgray,90.05vw 42.93vh lightgray,12.16vw 74.87vh lightgray,39.97vw 98.36vh lightgray,26.03vw 63.33vh lightgray,58.88vw 84.55vh lightgray,92.53vw 89.37vh lightgray,42.92vw 20.87vh lightgray,63.51vw 70.7vh lightgray,20.17vw 48.71vh lightgray,48.09vw 59.56vh lightgray,53.78vw 17.44vh lightgray,95.12vw 15.67vh lightgray,47.89vw 28.08vh lightgray,70.97vw 90.51vh lightgray,74.49vw 5.3vh lightgray,89vw 24.77vh lightgray,16.21vw 44.8vh lightgray,28.85vw 14.85vh lightgray,21.8vw 23.49vh lightgray,17.81vw 42.74vh lightgray,7.14vw 15.23vh lightgray,50.19vw 72.32vh lightgray,75.39vw 90.67vh lightgray,71.45vw 7.73vh lightgray,1.58vw 17.93vh lightgray,83.61vw 20.23vh lightgray,25.54vw 4.31vh lightgray,23.82vw 67.98vh lightgray,95.75vw 80.27vh lightgray,35.87vw 76.08vh lightgray,44.74vw 14.91vh lightgray,22.56vw 50.74vh lightgray,57.28vw 50.83vh lightgray,17.8vw 19.35vh lightgray,94.96vw 44.86vh lightgray,21.77vw 94.3vh lightgray,1.23vw 95.72vh lightgray,67.6vw 59.43vh lightgray,12.28vw 16.04vh lightgray,68.88vw 34.75vh lightgray,94.33vw 57.83vh lightgray,8.61vw 34.62vh lightgray,31.5vw 51.64vh lightgray,86.98vw 8.94vh lightgray,62.41vw 4.63vh lightgray,20.53vw 18.43vh lightgray,22.56vw 52.33vh lightgray,39.41vw 49.06vh lightgray,47.92vw 24.7vh lightgray,39.37vw 82.66vh lightgray,33.51vw 62.51vh lightgray,33vw 50.55vh lightgray,91.81vw 37.93vh lightgray,87.06vw 88.89vh lightgray,26.78vw 65.09vh lightgray,93vw 8.07vh lightgray,54.49vw 2.48vh lightgray,43.38vw 26.76vh lightgray,83.24vw 57.25vh lightgray,43.66vw 43.34vh lightgray,5.9vw 92.5vh lightgray,36.28vw 19.25vh lightgray,82.41vw 76.38vh lightgray,17.61vw 34.44vh lightgray,90.4vw 82.07vh lightgray,33.43vw 66.68vh lightgray,34.87vw 0.29vh lightgray,36.08vw 63.96vh lightgray,63.16vw 88.57vh lightgray,85.9vw 98.22vh lightgray,7.96vw 8.73vh lightgray,62.23vw 1.33vh lightgray,99.18vw 87.61vh lightgray,19.81vw 32.75vh lightgray,32.11vw 18.48vh lightgray,70.32vw 33.85vh lightgray,68.34vw 69.83vh lightgray,13.15vw 85.89vh lightgray,26.47vw 90.45vh lightgray,1.44vw 40.46vh lightgray,29.16vw 49.19vh lightgray,32.94vw 64.04vh lightgray,96.85vw 10.82vh lightgray,94.63vw 16.85vh lightgray,62.24vw 69.24vh lightgray,95.74vw 3.8vh lightgray,70.59vw 92.39vh lightgray,83.64vw 79.26vh lightgray,81vw 32.61vh lightgray,57.56vw 65.87vh lightgray,61.48vw 68.44vh lightgray,97.78vw 7.52vh lightgray,96.48vw 44.1vh lightgray,80.79vw 90.74vh lightgray,79.11vw 9.3vh lightgray,36.31vw 1.77vh lightgray,25.91vw 43.59vh lightgray,6.02vw 5.72vh lightgray,25.77vw 16.34vh lightgray,54.17vw 79.76vh lightgray,80vw 54.4vh lightgray,36.85vw 76.45vh lightgray,35.61vw 49.86vh lightgray,13.89vw 90.35vh lightgray,74.64vw 13.07vh lightgray,74vw 96.97vh lightgray,83.59vw 59.16vh lightgray,40.49vw 28.42vh lightgray,8.28vw 23.17vh lightgray,13.41vw 28.44vh lightgray,88.71vw 15.97vh lightgray,56.87vw 58.26vh lightgray,75.43vw 29.34vh lightgray,16.79vw 7.59vh lightgray,35.86vw 11.49vh lightgray,94.19vw 70.25vh lightgray,28.63vw 57.34vh lightgray,15.79vw 93.38vh lightgray,50.95vw 78.15vh lightgray,46.75vw 6.62vh lightgray,41.48vw 11.83vh lightgray,39.54vw 96.36vh lightgray,84.57vw 38.81vh lightgray,4.3vw 99.68vh lightgray,54.82vw 39.97vh lightgray,78.29vw 98.95vh lightgray,93.97vw 76.06vh lightgray,63.41vw 78.14vh lightgray,13.51vw 30.07vh lightgray,89.34vw 14.95vh lightgray,83.04vw 86.83vh lightgray,26.14vw 30.73vh lightgray,25.84vw 13.71vh lightgray,43.89vw 23.41vh lightgray,4.23vw 62.59vh lightgray,3.99vw 51.35vh lightgray,46.3vw 3.06vh lightgray,3.22vw 86.4vh lightgray,46.19vw 52.67vh lightgray,75.57vw 73.65vh lightgray,78.1vw 95.03vh lightgray,54.75vw 98.09vh lightgray,89.19vw 60.82vh lightgray,33.58vw 5.78vh lightgray,31.87vw 92.27vh lightgray,30.85vw 76.81vh lightgray,57.99vw 24.87vh lightgray,24.09vw 11.16vh lightgray,14.65vw 20.26vh lightgray,57.81vw 73.93vh lightgray,12.26vw 47.18vh lightgray,0.81vw 26.23vh lightgray,69.62vw 71.23vh lightgray,25.9vw 72.72vh lightgray,47.27vw 4.5vh lightgray,81.7vw 13.14vh lightgray,78.06vw 16.63vh lightgray,3.01vw 69.47vh lightgray,1.72vw 59.73vh lightgray,22.91vw 57.39vh lightgray,17.21vw 18.94vh lightgray,42.92vw 38.33vh lightgray,98.12vw 3.75vh lightgray,44.76vw 27.31vh lightgray,19.99vw 83.17vh lightgray,3.05vw 54.63vh lightgray,8.99vw 70.33vh lightgray,75.76vw 31.36vh lightgray,99.03vw 6.43vh lightgray,38.68vw 73.79vh lightgray,42.07vw 9.68vh lightgray,69.73vw 24.28vh lightgray,90.62vw 25.19vh lightgray,17.54vw 16.41vh lightgray,27.36vw 95.24vh lightgray,60.15vw 68.48vh lightgray,91.95vw 24.81vh lightgray,95.3vw 40.46vh lightgray,82.49vw 86.23vh lightgray,7.14vw 9.17vh lightgray,92.96vw 24.86vh lightgray,59.86vw 49.16vh lightgray,78.98vw 75.46vh lightgray,22.04vw 35.26vh lightgray,43.6vw 35.71vh lightgray,39.93vw 75.73vh lightgray,63.3vw 71.85vh lightgray,26.99vw 36.88vh lightgray,11.8vw 83.6vh lightgray,3.69vw 94.78vh lightgray,73.98vw 70.91vh lightgray,81.54vw 65.06vh lightgray,74.04vw 75.86vh lightgray,23.52vw 22.32vh lightgray,72.16vw 6.39vh lightgray,54.55vw 51.65vh lightgray,23.42vw 74.24vh lightgray,56.46vw 49.38vh lightgray,74.04vw 54.95vh lightgray,42.42vw 72.69vh lightgray,92.35vw 8.71vh lightgray,35.53vw 20.27vh lightgray,69.05vw 49.47vh lightgray,24.19vw 17.88vh lightgray,58.09vw 42.65vh lightgray,62.46vw 71.95vh lightgray,8.51vw 68.58vh lightgray,82.04vw 2.7vh lightgray,24.04vw 18.14vh lightgray,9.91vw 23.61vh lightgray,89.92vw 17.64vh lightgray,12.04vw 92.66vh lightgray,97.4vw 5.71vh lightgray,8.9vw 57.89vh lightgray,23.16vw 55.55vh lightgray,0.59vw 59.12vh lightgray,75.37vw 26.84vh lightgray,47.36vw 75.35vh lightgray,24.63vw 18.28vh lightgray,31.76vw 94.14vh lightgray,34.55vw 92.98vh lightgray,90.85vw 74.52vh lightgray,99.97vw 75.9vh lightgray,56.16vw 61.68vh lightgray,69.49vw 30.58vh lightgray,56.81vw 21.45vh lightgray,1.13vw 94.66vh lightgray,52.57vw 47.29vh lightgray,25.45vw 5.96vh lightgray,34.22vw 47.72vh lightgray,54.88vw 45.71vh lightgray,75.57vw 74.35vh lightgray,19.75vw 8.87vh lightgray,1.7vw 34.01vh lightgray,58.98vw 95.38vh lightgray,49.85vw 74.19vh lightgray,34.7vw 66.56vh lightgray,93.11vw 56.37vh lightgray,83.89vw 75.55vh lightgray,49.21vw 79.96vh lightgray,80.59vw 15vh lightgray,7.22vw 72.1vh lightgray,27.2vw 97.02vh lightgray,58.24vw 97.22vh lightgray,97.32vw 70.3vh lightgray,24.32vw 54.93vh lightgray,11.03vw 20.93vh lightgray,9.33vw 38.79vh lightgray,38.48vw 84.38vh lightgray,74.6vw 54.36vh lightgray,83.55vw 26.6vh lightgray,97.24vw 67.57vh lightgray,19.46vw 23.09vh lightgray,72.61vw 15.33vh lightgray,27.48vw 77.78vh lightgray,61.07vw 3.59vh lightgray,89.41vw 95.14vh lightgray,0.64vw 60.45vh lightgray,86.83vw 66.47vh lightgray,73.85vw 18.44vh lightgray,50.93vw 59.16vh lightgray,45.92vw 89.57vh lightgray,93.06vw 90.19vh lightgray,57.45vw 57.21vh lightgray,17.03vw 91.19vh lightgray,83.35vw 51.29vh lightgray,8.57vw 31.11vh lightgray,11.9vw 27.27vh lightgray,71.15vw 19.9vh lightgray,72.05vw 6.19vh lightgray,45.19vw 93.87vh lightgray,90.65vw 58.5vh lightgray,53vw 12.52vh lightgray,36.14vw 73.53vh lightgray,20.83vw 33.56vh lightgray,3.29vw 96.31vh lightgray,3.27vw 74.47vh lightgray,18.88vw 68.52vh lightgray,36.34vw 22.5vh lightgray,51.82vw 18.25vh lightgray,90.04vw 90.43vh lightgray,20.64vw 39.64vh lightgray,40.58vw 43.34vh lightgray,42.76vw 76.5vh lightgray,2.51vw 20.76vh lightgray,72.52vw 80.2vh lightgray,56.29vw 21.37vh lightgray,56.68vw 95.06vh lightgray,71.41vw 1.61vh lightgray,78.5vw 58.22vh lightgray,41.91vw 84.67vh lightgray,12.6vw 56.61vh lightgray,54.49vw 59.99vh lightgray,48.12vw 10.46vh lightgray,90.08vw 89.66vh lightgray,55.84vw 51.14vh lightgray,75.06vw 98.31vh lightgray,28.19vw 75.91vh lightgray,57.91vw 42.24vh lightgray,92.3vw 32.01vh lightgray,85.5vw 17.99vh lightgray,0.99vw 85vh lightgray,52.86vw 59.67vh lightgray,26.57vw 53.03vh lightgray,23.3vw 96.49vh lightgray,29.6vw 20.87vh lightgray,28.32vw 87.88vh lightgray,71.06vw 65.73vh lightgray,34.99vw 24.34vh lightgray,71.92vw 49.98vh lightgray,36.47vw 83.37vh lightgray,55.47vw 31.12vh lightgray,24.13vw 67.52vh lightgray,18.72vw 83.07vh lightgray,67.99vw 54.88vh lightgray,84.97vw 16.49vh lightgray,99.41vw 66.96vh lightgray,39.63vw 56.91vh lightgray,84.83vw 57.9vh lightgray,39.09vw 87.88vh lightgray,49.46vw 10.44vh lightgray,39.47vw 86.62vh lightgray,42.65vw 65.7vh lightgray,2vw 73.83vh lightgray,54.43vw 90.8vh lightgray,36.55vw 84.89vh lightgray,32.69vw 51.39vh lightgray,76.58vw 86.62vh lightgray,66.91vw 34.49vh lightgray,8.97vw 24vh lightgray,94.9vw 65.42vh lightgray,47.76vw 86.32vh lightgray,41.59vw 50.21vh lightgray,82.2vw 44.79vh lightgray,47.8vw 73.51vh lightgray,35.85vw 8.84vh lightgray,41.57vw 90.23vh lightgray,98.44vw 27.3vh lightgray,78.28vw 73.23vh lightgray,91.21vw 42.44vh lightgray,19.04vw 73.97vh lightgray,96.54vw 63.34vh lightgray,13.85vw 6.72vh lightgray,1.43vw 77.09vh lightgray,99.17vw 82.42vh lightgray,58.1vw 79.25vh lightgray,65.44vw 2.1vh lightgray,81.04vw 5.41vh lightgray,14.84vw 81.77vh lightgray,2.63vw 19.61vh lightgray,75.2vw 12.97vh lightgray,17.4vw 49.02vh lightgray,5.19vw 25.6vh lightgray,94.91vw 9.5vh lightgray,14.07vw 35.16vh lightgray,74.62vw 35.47vh lightgray,91.11vw 0.72vh lightgray,3.22vw 40.51vh lightgray,12.62vw 17.06vh lightgray,7.88vw 36.46vh lightgray,69.69vw 19.95vh lightgray,60.81vw 93.93vh lightgray,95.08vw 78.71vh lightgray,38.08vw 97.78vh lightgray,61.99vw 81.33vh lightgray,52.85vw 7.77vh lightgray,79.32vw 11.09vh lightgray,91.24vw 94.06vh lightgray,95.24vw 79.97vh lightgray,78.85vw 15vh lightgray,6.49vw 91.69vh lightgray,95.4vw 78.17vh lightgray,91.76vw 52.61vh lightgray,35.76vw 9.25vh lightgray,31.12vw 0.97vh lightgray,51.11vw 22.01vh lightgray,61.1vw 27.25vh lightgray,14.6vw 24.44vh lightgray,43.25vw 46.74vh lightgray,2.04vw 69.91vh lightgray,51.12vw 64.93vh lightgray,11.11vw 1.17vh lightgray,33.51vw 65.16vh lightgray,1.46vw 42.39vh lightgray,36.66vw 52.63vh lightgray,80.35vw 29.98vh lightgray,1.11vw 50.67vh lightgray,89.77vw 85.02vh lightgray,27.26vw 62.48vh lightgray,21.87vw 71.7vh lightgray,75.56vw 40.02vh lightgray,51.32vw 24.3vh lightgray,87.58vw 54.97vh lightgray,76.9vw 12.77vh lightgray,95.88vw 56.71vh lightgray,24.7vw 60.41vh lightgray,56.65vw 19.65vh lightgray,22.39vw 33vh lightgray,31.35vw 54.67vh lightgray,71.86vw 92.56vh lightgray,54.11vw 10.14vh lightgray,5.62vw 44.19vh lightgray,42.85vw 11.82vh lightgray,34.3vw 67.25vh lightgray,52.44vw 54.8vh lightgray,85.65vw 51.03vh lightgray,99.36vw 12.94vh lightgray,56.94vw 97.67vh lightgray,21.89vw 28.09vh lightgray,61.59vw 67.33vh lightgray,15.85vw 26.29vh lightgray,49vw 67vh lightgray,94.67vw 77.39vh lightgray,18.27vw 3.28vh lightgray,5.29vw 32.28vh lightgray,4.74vw 91.48vh lightgray,72.53vw 9.67vh lightgray,75.43vw 69.98vh lightgray,51.17vw 97.37vh lightgray,96.5vw 53.63vh lightgray,51.17vw 63.87vh lightgray,83.92vw 2.11vh lightgray,18.81vw 37.94vh lightgray,30.68vw 84.02vh lightgray,54.64vw 50.44vh lightgray,12.1vw 99.58vh lightgray,68.98vw 43.87vh lightgray,85.54vw 99.5vh lightgray,31.97vw 65.61vh lightgray,4.63vw 68.95vh lightgray,33.12vw 55.15vh lightgray,67.7vw 91.86vh lightgray,56.56vw 7.8vh lightgray,56.22vw 25.69vh lightgray,47.54vw 10.66vh lightgray,81.07vw 4.66vh lightgray,49.28vw 93.82vh lightgray,55.04vw 85.81vh lightgray,45vw 73.35vh lightgray,16.88vw 21.16vh lightgray,87.81vw 70.15vh lightgray,89.34vw 63.16vh lightgray,33.62vw 78.11vh lightgray,68.85vw 66.33vh lightgray,73.04vw 40.79vh lightgray,8.54vw 78.56vh lightgray,19.37vw 1.66vh lightgray,38.21vw 2.17vh lightgray,83.51vw 96.29vh lightgray,7.64vw 81.77vh lightgray,98.91vw 51.78vh lightgray,56.57vw 41.73vh lightgray,99.12vw 97.48vh lightgray,68.88vw 28.74vh lightgray,92.07vw 69.41vh lightgray,22.58vw 40.4vh lightgray,28.23vw 65.93vh lightgray,65.62vw 13.29vh lightgray,76.36vw 68.71vh lightgray,77.44vw 31.51vh lightgray,24.29vw 98.11vh lightgray,40.41vw 98.32vh lightgray,82.15vw 64.98vh lightgray,93.76vw 22.83vh lightgray,55.35vw 56.01vh lightgray,68.24vw 33.18vh lightgray,47.34vw 56.38vh lightgray,49.82vw 60.75vh lightgray,55.97vw 60.6vh lightgray,88.89vw 82.93vh lightgray,19.68vw 29.79vh lightgray,17.35vw 10.88vh lightgray,28.02vw 44.81vh lightgray,69.49vw 74.56vh lightgray,27.57vw 62.64vh lightgray,99.35vw 2.27vh lightgray,82.85vw 5.94vh lightgray,63.41vw 27.32vh lightgray,9.48vw 16.99vh lightgray,35.62vw 77.23vh lightgray,47.52vw 70.36vh lightgray,58.28vw 31.12vh lightgray,97.56vw 57.87vh lightgray,74.79vw 54.5vh lightgray,73.56vw 79.78vh lightgray,32.6vw 44.94vh lightgray,45.03vw 72.41vh lightgray,21.88vw 19.4vh lightgray,27.9vw 9.88vh lightgray,72.87vw 66.27vh lightgray,36.5vw 96.87vh lightgray,2.22vw 9.49vh lightgray,17.5vw 86.3vh lightgray,67.81vw 41.59vh lightgray,13.99vw 44.1vh lightgray,84.3vw 43.89vh lightgray,48.57vw 65.05vh lightgray,42.5vw 16.36vh lightgray,81.58vw 91.21vh lightgray,66.55vw 38.01vh lightgray,84.6vw 53.62vh lightgray,76.89vw 7.04vh lightgray,12.23vw 7.55vh lightgray,62.72vw 50.94vh lightgray,79.62vw 64.69vh lightgray,79.73vw 13.67vh lightgray,55.29vw 67.8vh lightgray,43.92vw 16.93vh lightgray,7.09vw 93.68vh lightgray,67.93vw 60.01vh lightgray,66.82vw 32.19vh lightgray,82.48vw 15.68vh lightgray,30.71vw 10.21vh lightgray,17.21vw 42.35vh lightgray,64.87vw 54.02vh lightgray,63.13vw 90.28vh lightgray,70.2vw 33.44vh lightgray,87.36vw 75.61vh lightgray,22.19vw 13.15vh lightgray,82.78vw 7.81vh lightgray,4.08vw 88.28vh lightgray,63.51vw 88.98vh lightgray,84.09vw 15.79vh lightgray,20.59vw 37.63vh lightgray,93.75vw 13.14vh lightgray,45.39vw 59.36vh lightgray,96.68vw 90.71vh lightgray,67.35vw 51.61vh lightgray,67.03vw 8.31vh lightgray,67.33vw 66.72vh lightgray,16.7vw 55.27vh lightgray,19.22vw 59.97vh lightgray,43.81vw 27.83vh lightgray,40.17vw 78.11vh lightgray,26.18vw 44.46vh lightgray,45.5vw 24.11vh lightgray,30.85vw 69.71vh lightgray,75.39vw 4.41vh lightgray,21.26vw 97.38vh lightgray,7.7vw 24.66vh lightgray,0.8vw 1.35vh lightgray,20.12vw 79.7vh lightgray,9.16vw 92.36vh lightgray,59.92vw 6.24vh lightgray,94.95vw 63.33vh lightgray,94.01vw 87.96vh lightgray,4.77vw 97.73vh lightgray,9vw 78.63vh lightgray,41.62vw 91.77vh lightgray,75.2vw 71.47vh lightgray,33.91vw 21.97vh lightgray,67.66vw 27.7vh lightgray;
+}
+.contentBody{
+
+     background: -webkit-linear-gradient(left, #000000, #794600);
+    background: -moz-linear-gradient(left, #000000, #794600);
+    background: -ms-linear-gradient(left, #000000, #794600);
+    background: -o-linear-gradient(left, #000000, #794600);
+    background: linear-gradient(to right, #000000, #794600);
+}
+#stars{
+    position: fixed;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	box-shadow: var(--estrelinhas);
+    animation: anim-stars 20s linear infinite;
+}
+#stars::after{
+    position: absolute;
+    content: " ";
+    top: 100vh;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    box-shadow: var(--estrelinhas);
+    color:lightgray;
+  }
+@keyframes anim-stars {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
+}
+#display-jogo{
+    padding: 5% 0 ;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+
+    
+}
+
+#jogo{
+    display: none; /* flex;*/
+
+    width: 1080px;
+    height: 720px;
+    position: absolute;
+    background-image: url("./imagens/mapaHerois2020.png");
+
+    border: 2px solid black;
+}
+#jogo #inicio-mapa{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+}
+#jogo .irPara{
+    position:relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 0 ;
+    background-color: cyan;
+    cursor: pointer;
+}
+
+#jogo .irPara:hover img{
+    height: 52px;
+    width: 52px;
+    filter:grayscale(0.5);
+}
+#jogo .irPara img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+#jogo .irPara:hover button{
+    height: 52px;
+    width: 52px;
+    
+}
+#jogo #irPara_Denji{
+    bottom: -38%;
+    right: -22%;
+}
+#jogo #irPara_Loja{
+    background-color: goldenrod;
+    bottom: -61%;
+    left: 23%;
+}
+
+#sprites{
+    display: none;
+    width: 100%;
+    height: 70%;
+    justify-content: center;
+    bottom: 0;
+
+}
+.coracao
+{
+    display: flex;
+    margin-top: 20%;
+    width: 200px;
+    height: 200px;
+
+   
+    animation: batida 1.4s linear infinite;
+}
+.coracao:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.coracao:after
+{
+    content:'' ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+@keyframes batida
+{
+    0% {transform:  scale(1);}
+    25% {transform:  scale(1);}
+    30% {transform:  scale(1.4);}
+    50% {transform: scale(1.2);}
+    70% {transform:  scale(1.4);}
+    100% {transform:  scale(1);}
+}
+
+
+
+
+.madimi-one-regular {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+#falas{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: lightgoldenrodyellow;
+    
+    display: none;
+}
+#falas #textoFala{
+    font-size: 32px;
+    font-family: "Madimi One";
+    opacity: 100%;
+    color: black;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    top:5%;
+    width: 100%;
+    
+}
+#falas #escolhas{
+    bottom: 0;
+    display: flex;
+    height: 45%;
+    position: absolute;
+    opacity: 100%;
+    width: 100%;
+    border-top: 1px solid black;
+}
+#falas #escolhas button{
+    bottom: 0;
+    width: 33.33%;
+    font-size: 22px;
+    font-family: "Madimi One";
+    color: black;
+    background-color:lightblue;
+    border: 0;
+    font-style: italic;
+    text-decoration:underline ;
+}
+#falas #escolhas button:hover{
+    background-color:lightseagreen;
+}
+#fullscreen{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    left: 2%;
+    top:2%;
+    border: 1px solid darkslategrey;
+}
+
+#abrir-inventario{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    right: 2%;
+    top:2%;
+    cursor: pointer;
+    border: 1px solid darkslategrey;
+}
+
+#abrir-inventario img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+#abrir-inventario:hover img{
+    filter:grayscale(0.5);
+}
+#inventario{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#inventario .inv-texto{
+    font-size: 32px;
+    font-family: "Madimi One";
+    text-align: center;
+    color: black;
+   
+    position: absolute;
+}
+#inventario #inv-nome{
+    top:14.5%;
+    left: 26%;
+    width: 25%;
+    text-decoration: underline;
+}
+
+#inventario #inv-atributos{
+    top: 27%;
+    left: 17%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#inventario #inv-atributos li{
+    display: flex;
+    margin-right: 35%;
+    margin-bottom: 24%;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    
+    text-align: center;
+}
+#inventario #inv-atributos #inv-for{
+    color: red;
+}
+#inventario #inv-atributos #inv-dex{
+    color: cyan;
+}
+#inventario #inv-atributos #inv-con{
+    color: greenyellow;
+}
+#inventario #inv-atributos #inv-int{
+    color: plum;
+}
+#inventario #inv-atributos #inv-sab{
+    color: purple;
+}
+#inventario #inv-atributos #inv-car{
+    color: goldenrod;
+}
+#inventario #inv-CA{
+    top:29%;
+    left: 48.5%;
+    color: darkslategray;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+#inventario #inv-HP{
+    top: 53%;
+    right: 47.5%;
+    color: red;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    width: 50px;
+}
+#inventario #inv-LVL{
+    top: 15.5%;
+    right: 16.5%;
+    color: green;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    width: 50px;
+}
+#inventario #inv-GEN{
+    top: 14.5%;
+    right: 28.5%;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    width: 50px;
+}
+#inventario #inv-itens{
+    top: 27%;
+    right: 15%;
+    font-size: 22px;
+    width: 27%;
+}
+#inventario #inv-itens li{
+    margin-bottom: 4%;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+}
+#inventario #inv-itens li button{
+    background-color: transparent;
+    border: 0;
+    font-size: 18px;
+}
+#inventario #inv-money{
+    bottom: 15%;
+    right: 15%;
+    display: flex;
+    color: goldenrod;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+#inventario #inv-itens-armadura{
+    bottom: 25%;
+    right: 15%;
+    font-size: 22px;
+    width: 27%;
+    color: darkslategrey;
+}
+#inventario #inv-itens li{
+    margin-bottom: 4%;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+#barraHP{
+    position: absolute;
+    width: 20px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #ccc;
+    top:15%;
+    right: 3.5%;
+    display: grid;
+    align-items: end;
+    border: 1px solid black;
+}
+#barraHP div{
+    background-color: crimson;
+    border-radius: 10px;
+
+}
+#barraHP p{
+    position: absolute;
+    text-align: center;
+    align-content: space-evenly;
+    width: 20px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-family: impact;
+    font-size: 20px;
+    height: 300px;
+    display: grid;
+}
+#barraINIMIGO{
+    position: absolute;
+    display: none;
+    width: 500px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ccc;
+    top: 2%;
+    align-items: end;
+    border: 2px solid black;
+}
+
+#barraINIMIGO div{
+    background-color: chocolate;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+#barraINIMIGO p{
+    position: absolute;
+    position: absolute;
+    text-align: center;
+    align-content: space-evenly;
+    height: 20px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-family: impact;
+    font-size: 20px;
+    width: 500px;
+    display: grid;
+    letter-spacing: 1px;
+}
+#barraREP{
+    position: absolute;
+    display: flex;
+    width: 500px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ccc;
+    top: 65%;
+    align-items: end;
+    border: 2px solid black;
+}
+#barraREP div{
+    background-color: green;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+#barraREP p{
+    position: absolute;
+    position: absolute;
+    text-align: center;
+    align-content: space-evenly;
+    height: 20px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-family: impact;
+    font-size: 20px;
+    width: 500px;
+    display: grid;
+    letter-spacing: 1px;
+}
+#loja{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+#loja h2{
+    font-family: Impact;
+    font-size: 32px;
+    color:white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    position: absolute;
+}
+#loja #armamento{
+    top: 14%;
+    left: 24%;
+}
+#loja #protecao{
+    top: 14%;
+    right: 24%;
+}
+#loja hr{
+    color: goldenrod;
+    border-color: goldenrod;
+    background-color: goldenrod;
+    height: 73%;
+    top: 13%;
+    width: 3px;
+    position: absolute;
+    left: 50%;
+    
+}
+.loja-button-compraVenda{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+#loja-armas{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    display: flex;
+    width: 35%;
+    height: 60%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+#loja-armas .loja-itens-armas,#loja-armadura .loja-itens-armaduras{
+    border-radius: 20px;
+    border: 1px solid goldenrod;
+    width: 110px;
+    height: 125px;
+    background-color:rgba(100, 100,100, 30%);
+}
+#loja-armas .loja-itens-armas button,#loja-armadura .loja-itens-armaduras button{
+    border-radius: 20px;
+    cursor: pointer;
+}
+#loja-armadura{
+    position: absolute;
+    top: 20%;
+    right: 14%;
+    display: flex;
+    width: 35%;
+    height: 60%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.loja-itens-nome{
+    font-family: Impact;
+    font-size: 18px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+} 
+.loja-itens-value{
+    font-family: Impact;
+    font-size: 14px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+#loja-mudar-modo{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+#loja-mudar-modo h3{
+    margin: 0 5%;
+    font-family: Impact;
+    font-size: 26px;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+#loja #loja-vender{
+    position: absolute;
+    width: 20%;
+    height: max-content;
+    font-size: 32px;
+    background-color: greenyellow;
+    bottom: 14%;
+    left: 22%;
+    
+}
+#loja #loja-sair{
+    position: absolute;
+    width: 20%;
+    height: max-content;
+    font-size: 32px;
+    background-color: red;
+    color: #ccc;
+    cursor: pointer;
+    bottom: 14%;
+    right: 22%;
+}
+.switch {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.switch + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+.switch--shadow + label {
+    padding: 2px;
+    width: 120px;
+    height: 60px;
+    background-color: #dddddd;
+    border-radius: 60px;
+}
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: '';
+}
+.switch--shadow + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: all 0.4s;
+}
+.switch--shadow + label:after {
+  width: 62px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+.switch--shadow:checked + label:before {
+    background-color: #8ce196;
+  }
+  .switch--shadow:checked + label:after {
+    transform: translateX(60px);
+  }
+#loja #loja-armas img,#loja #loja-armadura img{
+    width: 100%;
+    height: 50%;
+}
+#loja #loja-dinheiro{
+    position: absolute;
+    font-size: 26px;
+    font-family: Impact;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    top: 2%;
+    right: 12%;
+    display: flex;
+    color: gold;
+    align-items: center;
+
+}

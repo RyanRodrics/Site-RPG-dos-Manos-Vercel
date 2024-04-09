@@ -13,5 +13,12 @@ const Ficha = mongoose.model("fichas");
 router.get('/', (req, res) =>{
     res.render("herois2", {css: [{css: "herois2"}], js: [{js: "herois2"}], stars: "existo"});
 });
+router.get('/game',(req,res) => {
+    console.log(req.user);
+    res.render("games/gameHerois",{css:[{css:"gameHerois/load" },{css:"gameHerois/criacao"},{css:"gameHerois/jogo"}], js:[{js:"gameHerois/load"},{js: "gameHerois/buildLoad"}], user: req.user,stars:"EXISTO"});
+});
+router.get('/game/play',(req,res) => {
+    res.render("gameplay",{css:[{css:"" }], js:[{js:""}]});
+});
 
 export default router;
