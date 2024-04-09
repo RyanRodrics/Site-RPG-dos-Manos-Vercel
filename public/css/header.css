@@ -113,6 +113,7 @@
 
 #tela-login{
     position: absolute;
+    z-index: 3;
     width: 300px;
     height: 250px;
     right: 0;
@@ -143,6 +144,21 @@
     width: 100%;
     font-size: 16px;
 }
+#tela-login #mostrarSenha{
+    background-image: url(/imgs/tokens/mostrarSenha.png);
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    right: 10%;
+    top:41%;
+}
+#tela-login #mostrarSenha img{
+    width: 30px;
+    height: 30px;
+}
+
 #tela-login ul #login-button{
     display: grid;
     margin-bottom: 5%;
@@ -155,18 +171,23 @@
     padding: 10px;
     font-size: 20px;
     color: lightgray;
+    font-family: "Rubik";
+    font-weight: 400;
+    cursor: pointer;
     background-color: red;
     width: 100%;
 }
 #tela-login ul li #registro-display{
     margin-bottom: 5%;
     padding: 5px;
-    font-weight: lighter;
+    font-family: "Rubik";
+    font-weight: 400;
     font-size: 12px;
     background-color: darkslategray;
     text-decoration: none;
     color: lightgray;
     border: black solid 1px ;
+    
     display:block;
     width: 50%;
     margin-top: 2%;

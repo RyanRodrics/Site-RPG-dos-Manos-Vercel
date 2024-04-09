@@ -2,7 +2,6 @@ const navArray = document.querySelectorAll("#navbar ul li a");
 
 export function navSelect(url){
     navArray.forEach((nav) => {
-        console.log(nav.href)
         if(nav.href==navArray[0]+url){
             nav.style.backgroundColor="#820101"
             nav.style.fontWeight="500"
@@ -10,6 +9,16 @@ export function navSelect(url){
     })
 }
 
+const mostrarSenha = document.querySelector("#mostrarSenha");
+
+mostrarSenha.onclick = ()=>{
+    if(inputSenha.type =="text"){
+        inputSenha.type ="password";
+    }else{
+        inputSenha.type ="text"
+    }
+    console.log("AAAAAAAAAAAAAAAAAAAAAAAAA");
+};
 
 
 
@@ -54,6 +63,8 @@ export function navSelect(url){
         }else{
             login_tela.style.display = "block";
         }
+        inputUsuario.value = "";
+        inputSenha.value = "";
     }
     
     login_imagem.onclick = abrir_login;
