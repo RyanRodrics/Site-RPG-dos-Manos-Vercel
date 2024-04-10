@@ -1,9 +1,29 @@
+
 #melhorCanal{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: calc(0.43*(100vw));
     display: flex;
     background-color:#303030;
 }
+#melhorCanal div{
+    position: absolute;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    text-shadow: 0.2em 0.2em 0.4em black;
+    font-style: normal;
+}
+#melhorCanal div h1{
+    font-size: 48px;
+    margin-bottom: 2%;
+}
+
+#melhorCanal img{
+    width: 100%;
+    height: calc(0.43*(100vw));
+}
 
 
 
@@ -13,9 +33,10 @@
 
 
 
-/* body{
+body{
     background-color: rgb(255, 0, 0);
 }
+
 #logoHome{
     flex-direction: column;
     align-items: center;
@@ -34,4 +55,4 @@
     font-family: "Permanent Marker", cursive;
     align-items: center;
     justify-content: center;
-} */
+} 
