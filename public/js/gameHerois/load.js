@@ -1,18 +1,15 @@
 const saves = document.querySelectorAll(".saves");
+const fichas = JSON.parse(document.getElementById("fichas").value);
 
-
-import { teste } from "./objects.js";
-
-export const savesRecebidos = [teste,undefined,undefined,undefined];
+export const savesRecebidos = [fichas.ficha1,fichas.ficha2,fichas.ficha3,fichas.ficha4];
 
 function carregarJogo(index){
-    if(savesRecebidos[index] != undefined){
+    if(savesRecebidos[index] != null){
         localStorage.setItem('saveEscolhido', index);
     }else{
         localStorage.setItem('saveEscolhido',-1);
     }
 }
-
 
 saves.forEach((element,index) =>{
     element.onclick = ()=>{
