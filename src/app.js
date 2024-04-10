@@ -81,7 +81,7 @@ app.get('/', (req, res) =>{
         };
     }
     else {user = req.user;}
-    res.render("index", {css: [{css: "main"}], js: [{js: "index"}], user: user});
+    res.render("index", {css: [{css: "index"}], js: [{js: "index"}], user: user});
 });
 
 app.get('/gamedragon', (req, res) =>{
