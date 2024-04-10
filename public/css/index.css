@@ -1,8 +1,22 @@
-body{
+#melhorCanal{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color:#303030;
+}
+
+
+
+
+
+
+
+
+
+/* body{
     background-color: rgb(255, 0, 0);
 }
 #logoHome{
-    position: absolute;
     flex-direction: column;
     align-items: center;
     height: 100%;
@@ -20,4 +34,4 @@ body{
     font-family: "Permanent Marker", cursive;
     align-items: center;
     justify-content: center;
-}
+} */
