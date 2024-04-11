@@ -184,6 +184,7 @@ if(fichaRecebida != -1){
     fichaRecebida.progress.forEach((npc)=>{
         jogador().progress = npc;
     })
+    jogador().dinheiro = fichaRecebida.money;
     console.log(jogador());
     display_criacao.style.display = "none";
     display_jogo.style.display = "flex";
