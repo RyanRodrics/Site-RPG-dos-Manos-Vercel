@@ -69,8 +69,21 @@ router.get('/game/play',(req,res) => {
 });
 
 router.post('/game/save', (req, res) =>{
-    const ficha = JSON.parse(req.body.salvar);
-    Ficha.findOne({_id: ficha._id}).lean().then((ficha) =>{
+    const fichaSalvar = JSON.parse(req.body.salvar);
+    Ficha.findOne({_id: fichaSalvar.id}).lean().then((ficha) =>{
+        ficha.level = fichaSalvar.level;
+        ficha.hp = fichaSalvar.hp;
+        ficha.inventory = fichaSalvar.inventario;
+        ficha.money = fichaSalvar.money;
+        ficha.attributes = {
+            for: parseInt(fichaSalvar.for),
+            des: parseInt(fichaSalvar.des),
+            con: parseInt(fichaSalvar.con),
+            int: parseInt(fichaSalvar.int),
+            sab: parseInt(fichaSalvar.sab),
+            car: parseInt(fichaSalvar.car)
+        };
+        ficha.progress = progress; 
         ficha.save().then(() =>{
             console.log("Save realizado com sucesso");
             req.flash("success_msg", "Save realizado com sucesso");
