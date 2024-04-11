@@ -85,7 +85,7 @@ function compraVendaArmadura(index){
         if(jogador().invArmaduras.length <=1){
             if(jogador().dinheiro >= armors[index].value ){
                 jogador().dinheiro -= armors[index].value;
-                jogador().invArmaduras.unshift(armors[index]);
+                jogador().invArmaduras.push(armors[index]);
                 alert(`${armors[index].name} comprado com sucesso!`);
             }else{
                 alert("Saldo insuficiente");

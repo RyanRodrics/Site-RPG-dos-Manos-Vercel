@@ -31,7 +31,7 @@ class Personagem{
             armaduras: aarmadura
         };
         this.#hp = this.lvl*(10 + this.modCon);
-        this.#CA = this.invArmaduras[0].protecao + this.modDex;
+        this.#CA = this.invArmaduras[this.invArmaduras.length - 1].protecao + this.modDex;
         
     }
 
@@ -96,22 +96,22 @@ class Personagem{
         return this.#gender;
     }
     get armor(){
-        switch(this.invArmaduras[0].type){
+        switch(this.invArmaduras[this.invArmaduras.length - 1].type){
             case 'N':
-                return this.invArmaduras[0].protecao + this.modDex;
+                return this.invArmaduras[this.invArmaduras.length - 1].protecao + this.modDex;
                 break;
             case 'L':
-                return this.invArmaduras[0].protecao + this.modDex;
+                return this.invArmaduras[this.invArmaduras.length - 1].protecao + this.modDex;
                 break;
             case 'M':
-                if(this.modDex >=2 ) return this.invArmaduras[0].protecao + 2;
-                return this.invArmaduras[0].protecao + this.modDex;
+                if(this.modDex >=2 ) return this.invArmaduras[this.invArmaduras.length - 1].protecao + 2;
+                return this.invArmaduras[this.invArmaduras.length - 1].protecao + this.modDex;
                 break;
             case 'P':
-                return this.invArmaduras[0].protecao;
+                return this.invArmaduras[this.invArmaduras.length - 1].protecao;
                 break;
             default:
-                return this.invArmaduras[0].protecao + this.modDex;
+                return this.invArmaduras[this.invArmaduras.length - 1].protecao + this.modDex;
                 break;
         }      
     }

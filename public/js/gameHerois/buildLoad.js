@@ -6,7 +6,7 @@ const nome = document.querySelectorAll(".nome");
 nome.forEach((element) =>{
     element.innerText = jogador.nickname;
 });
-navSelect("herois2");
+navSelect("herois2/game");
 
 savesRecebidos
 const saveNome = document.querySelectorAll(".save-nome");

@@ -149,10 +149,42 @@ function build_prota(){
 criar_prota.onclick = build_prota;
 
 //carregar save
-import { savesRecebidos } from "./load.js";
-console.log(savesRecebidos[localStorage.getItem('saveEscolhido')]);
-if(savesRecebidos[localStorage.getItem('saveEscolhido')] != undefined){
-    protagonista.push(savesRecebidos[localStorage.getItem('saveEscolhido')]);
+
+function formatarNome(nome){
+    let novoNome = "";
+    let nomeSplit = nome.split("");
+    nomeSplit.forEach((letra,index)=>{
+        if(/[A-Z]/.test(letra) && index != 0){
+            novoNome += " ";
+
+        }
+        novoNome += letra;
+    })
+    return novoNome;
+}
+function procurarObjetoNome(array,nomes){
+    let itensAchados = [];
+    array.forEach((objeto)=>{
+        nomes.forEach((nome)=>{
+            if(objeto.type == formatarNome(nome) || objeto.name == formatarNome(nome)){
+                itensAchados.push(objeto)
+            }
+        })
+    })
+    console.log(itensAchados)
+    return itensAchados;
+}
+
+let fichaRecebida = JSON.parse(localStorage.getItem('saveEscolhido'));
+if(fichaRecebida != -1){
+    console.log(fichaRecebida)
+    objetos.guns.unshift(objetos.mao);
+    objetos.armors.unshift(objetos.roupa);
+    protagonista.push(new Save(fichaRecebida.nick,fichaRecebida.level,[fichaRecebida.attributes.for,fichaRecebida.attributes.des,fichaRecebida.attributes.con,fichaRecebida.attributes.int,fichaRecebida.attributes.sab,fichaRecebida.attributes.car],fichaRecebida.gender,procurarObjetoNome(objetos.guns,fichaRecebida.inventory.armas),procurarObjetoNome(objetos.armors,fichaRecebida.inventory.armaduras)));
+    fichaRecebida.progress.forEach((npc)=>{
+        jogador().progress = npc;
+    })
+    console.log(jogador());
     display_criacao.style.display = "none";
     display_jogo.style.display = "flex";
 }

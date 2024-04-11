@@ -10,7 +10,7 @@ const escolha_1 = document.querySelector("#escolha-1");
 const escolha_2 = document.querySelector("#escolha-2");
 const escolha_3 = document.querySelector("#escolha-3");
 import { navSelect } from "../header.js";
-navSelect("herois2");
+navSelect("herois2/game");
 
 import {jogador} from "./criacao.js";
 export {mudarButoes,mudarEscolhas,mudarFala, leave};
@@ -55,6 +55,15 @@ function leave(){
     jogo.style.backgroundImage = "url(/imgs/gameHerois/mapaHerois2020.png)";
     salvar_mapaAnterior("Mapa");
 }
+let mostrarLugares = setInterval(() => {
+    jogador().progress.forEach((element) =>{
+        switch(element.nome){
+            case "Denji":
+                irDenji.style.display = "none";
+                break;
+        }
+    })
+},10)
 //abrindo inventario
 import { criarFicha } from "./ficha.js";
 let mapaAnterior,falaAberto,salvarFala,salvarEscolhas;
@@ -137,6 +146,3 @@ function indoParaDenji(){
     falando_Denji();
 }
 irDenji.onclick = indoParaDenji;
-
-
-
