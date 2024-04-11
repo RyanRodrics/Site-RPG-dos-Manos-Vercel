@@ -321,16 +321,40 @@ class Npc extends Personagem{
 
 }
 class Save extends Personagem{
+    #indexSave
+    #idFicha
+    #idUser
     #progresso
-    constructor(anick,alevel,atributos,agenero,aarma,aarmadura){
+    constructor(anick,alevel,atributos,agenero,aarma,aarmadura,idFicha,idUser,index){
         super(anick,alevel,atributos,agenero,aarma,aarmadura);
         this.#progresso = [];
+        this.#idFicha = idFicha;
+        this.#idUser = idUser;
+        this.#indexSave = index;
     }
     get progress(){
         return this.#progresso;
     }
     set progress(npc){
         this.#progresso.push(npc);
+    }
+    get saveid(){
+        return this.#idFicha;
+    }
+    set saveid(ide){
+        this.#idFicha = ide; 
+    }
+    get userid(){
+        return this.#idUser
+    }
+    set userid(ide){
+        this.#idUser = ide; 
+    }
+    get index(){
+        return this.#indexSave
+    }
+    set index(index){
+        this.#indexSave =index; 
     }
 }
 

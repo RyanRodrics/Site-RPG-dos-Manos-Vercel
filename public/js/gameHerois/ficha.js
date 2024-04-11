@@ -21,6 +21,8 @@ const inv_itens_subir = document.querySelectorAll(".inv-itens-subir");
 const inv_itens_descer = document.querySelectorAll(".inv-itens-descer");
 
 const inv_itens_armadura = document.querySelector("#inv-item-armadura")
+
+const salvarButton =document.querySelector("#salvar-jogo button")
 //funções auxiliares
 function escrevendo(html,texto){
     html.innerText = texto;
@@ -56,6 +58,11 @@ function descer(index){
     }
     montarInventario();
 }
+//buildando o que será salvado
+function enviandoSave(){
+    document.querySelector('#salvar').value = JSON.stringify(jogador());
+    
+}
 //importando dados do jogador
 import {jogador} from "./criacao.js";
 
@@ -90,4 +97,5 @@ export function criarFicha(){
         }
     })
     inv_itens_armadura.innerText = jogador().invArmaduras[1].toString();
+    salvarButton.onclick = enviandoSave;
 }
