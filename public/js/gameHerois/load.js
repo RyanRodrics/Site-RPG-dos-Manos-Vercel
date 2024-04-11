@@ -9,16 +9,9 @@ if(document.getElementById("fichas") != null){
 export function savesRecebidosExport(){
     return savesRecebidos;
 }
-
-
-
-
-
-
-
 function carregarJogo(index){
     if(savesRecebidos[index] != null){
-        localStorage.setItem('saveEscolhido', JSON.stringify(fichas.ficha1));
+        localStorage.setItem('saveEscolhido', JSON.stringify(savesRecebidos[index]));
     }else{
         localStorage.setItem('saveEscolhido',-1);
     }

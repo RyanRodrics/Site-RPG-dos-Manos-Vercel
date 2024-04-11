@@ -176,6 +176,7 @@ function procurarObjetoNome(array,nomes){
 }
 
 let fichaRecebida = JSON.parse(localStorage.getItem('saveEscolhido'));
+//document.querySelector("salvar").value = fichaRecebida;
 if(fichaRecebida != -1){
     console.log(fichaRecebida)
     objetos.guns.unshift(objetos.mao);

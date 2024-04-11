@@ -199,6 +199,7 @@ html{
     cursor:pointer;
     right:35%;
 }
+
 @media (max-width:600px ) {
     #display-jogo{
         transform:scale(0.3),rotate(90deg);
@@ -208,7 +209,7 @@ html{
     }
     #display-jogo div{
         transform: rotate(90deg);
-        
+
     }
 }
 
