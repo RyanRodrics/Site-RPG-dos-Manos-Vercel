@@ -70,32 +70,94 @@ router.get('/game/play',(req,res) => {
 
 router.post('/game/save', (req, res) =>{
     const fichaSalvar = JSON.parse(req.body.salvar);
-    Ficha.findOne({_id: fichaSalvar.id}).lean().then((ficha) =>{
-        ficha.level = fichaSalvar.level;
-        ficha.hp = fichaSalvar.hp;
-        ficha.inventory = fichaSalvar.inventario;
-        ficha.money = fichaSalvar.money;
-        ficha.attributes = {
-            for: parseInt(fichaSalvar.for),
-            des: parseInt(fichaSalvar.des),
-            con: parseInt(fichaSalvar.con),
-            int: parseInt(fichaSalvar.int),
-            sab: parseInt(fichaSalvar.sab),
-            car: parseInt(fichaSalvar.car)
-        };
-        ficha.progress = progress; 
-        ficha.save().then(() =>{
-            console.log("Save realizado com sucesso");
-            req.flash("success_msg", "Save realizado com sucesso");
-            res.redirect("/herois2/game");
+    if(req.body.salvar.id) {
+        Ficha.findOne({_id: fichaSalvar.id}).lean().then((ficha) =>{
+            ficha.level = fichaSalvar.level;
+            ficha.hp = fichaSalvar.hp;
+            ficha.inventory = fichaSalvar.inventario;
+            ficha.money = fichaSalvar.money;
+            ficha.attributes = {
+                for: parseInt(fichaSalvar.for),
+                des: parseInt(fichaSalvar.des),
+                con: parseInt(fichaSalvar.con),
+                int: parseInt(fichaSalvar.int),
+                sab: parseInt(fichaSalvar.sab),
+                car: parseInt(fichaSalvar.car)
+            };
+            ficha.progress = progress; 
+            ficha.save().then(() =>{
+                console.log("Save realizado com sucesso");
+                req.flash("success_msg", "Save realizado com sucesso");
+                res.redirect("/herois2/game");
+            }).catch((error) =>{
+                console.log("Erro ao salvar edição da ficha " + error);
+                req.flash("error_msg", "Erro ao salvar edição da ficha " + error);
+                res.redirect("/herois2/game");
+            });
         }).catch((error) =>{
-            console.log("Erro ao salvar edição da ficha " + error);
-            req.flash("error_msg", "Erro ao salvar edição da ficha " + error);
+            console.log("Erro no salvamento " + error);
+        });
+    } else {
+        const novaFicha = {
+            nick: fichaSalvar.nick,
+            level: fichaSalvar.level,
+            gender: fichaSalvar.gender,
+            ca: fichaSalvar.ca,
+            hp: fichaSalvar.hp,
+            inventory: fichaSalvar.inventario,
+            money: fichaSalvar.money,
+            attributes: {
+                for: fichaSalvar.for,
+                des: fichaSalvar.des,
+                con: fichaSalvar.con,
+                int: fichaSalvar.int,
+                sab: fichaSalvar.sab,
+                car: fichaSalvar.car
+            },
+            progress: progress
+        };
+        new Ficha(novaFicha).save().then(() =>{
+            console.log("Ficha salva com sucesso");
+            req.flash("success_msg", "Ficha salva com sucesso");
+            Usuario.findOne({_id: fichaSalvar.userId}).lean().then((user) =>{ 
+                switch (fichaSalvar.index) {
+                    case 0:
+                        const save1 = new mongoose.Types.ObjectId(fichaSalvar.id);
+                        user.gameSaves.save1 = save1;
+                        break;
+                    case 1:
+                        const save2 = new mongoose.Types.ObjectId(fichaSalvar.id);
+                        user.gameSaves.save2 = save2;
+                        break;
+                    case 2:
+                        const save3 = new mongoose.Types.ObjectId(fichaSalvar.id);
+                        user.gameSaves.save3 = save3;
+                        break;
+                    case 3:
+                        const save4 = new mongoose.Types.ObjectId(fichaSalvar.id);
+                        user.gameSaves.save4 = save4;
+                        break;
+                    default:
+                        break;        
+                }
+                user.save().then(() =>{
+                    console.log("Usuário editado com sucesso");
+                    req.flash("success_msg", "Usuário editado com sucesso");
+                    res.redirect("/herois2/game");
+                }).catch((error) =>{
+                    console.log("Erro ao salvar edição do usuário " + error);
+                    req.flash("error_msg", "Erro ao salvar edição do usuário " + error);
+                    res.redirect("/herois2/game");
+                });
+            }).catch((error) =>{
+                console.log(error);
+            });
+        }).catch((error) =>{
+            console.log("Erro ao criar ficha: " + error);
+            req.flash("error_msg", "Erro ao criar ficha");
             res.redirect("/herois2/game");
         });
-    }).catch((error) =>{
-        console.log("Erro no salvamento " + error);
-    });
+    } 
 });
 
 export default router;
