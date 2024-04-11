@@ -68,4 +68,21 @@ router.get('/game/play',(req,res) => {
     res.render("games/gameHerois/play",{css:[{css:"gameHerois/load" },{css:"gameHerois/criacao"},{css:"gameHerois/jogo"}], js:[{js:"gameHerois/classes"},{js:"gameHerois/criacao"},{js:"gameHerois/jogo"},{js:"gameHerois/criacao"}],stars:"EXISTO"});
 });
 
+router.post('/game/save', (req, res) =>{
+    const ficha = JSON.parse(req.body.salvar);
+    Ficha.findOne({_id: ficha._id}).lean().then((ficha) =>{
+        ficha.save().then(() =>{
+            console.log("Save realizado com sucesso");
+            req.flash("success_msg", "Save realizado com sucesso");
+            res.redirect("/herois2/game");
+        }).catch((error) =>{
+            console.log("Erro ao salvar edição da ficha " + error);
+            req.flash("error_msg", "Erro ao salvar edição da ficha " + error);
+            res.redirect("/herois2/game");
+        });
+    }).catch((error) =>{
+        console.log("Erro no salvamento " + error);
+    });
+});
+
 export default router;
