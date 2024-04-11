@@ -20,6 +20,21 @@
     font-size: 32px;
     text-decoration: underline white;
 }
+#carregar-save img{
+    width: 70%;
+    background-color: black;
+    height: 40%;
+    top:20%;
+    position: absolute;
+    left: 15%;
+}
+#carregar-save h3{
+    width: 100%;
+    justify-items: center;
+    bottom: 15%;
+    position: absolute;
+    font-size: 32px;
+}
 #save-lista{
     left: 13%;
     width: 74%;

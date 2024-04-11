@@ -199,15 +199,16 @@ html{
     cursor:pointer;
     right:35%;
 }
-@media (max-width:1080px ) {
-    #jogo , #criacao-de-personagem{
-        transform: scale(0.3);
-    }
+@media (max-width:600px ) {
     #display-jogo{
+        transform:scale(0.3),rotate(90deg);
         height: 100%;
         width: 100%;
         margin-top: 10%;
     }
-    
+    #display-jogo div{
+        transform: rotate(90deg);
+        
+    }
 }
 
