@@ -1,7 +1,17 @@
 const saves = document.querySelectorAll(".saves");
-const fichas = JSON.parse(document.getElementById("fichas").value);
+let savesRecebidos;
+if(document.getElementById("fichas") != null){
+    const fichas = JSON.parse(document.getElementById("fichas").value);
+    savesRecebidos = [fichas.ficha1,fichas.ficha2,fichas.ficha3,fichas.ficha4];
+}else{
+    savesRecebidos = [null,null,null,null]
+}
+export function savesRecebidosExport(){
+    return savesRecebidos;
+}
 
-export const savesRecebidos = [fichas.ficha1,fichas.ficha2,fichas.ficha3,fichas.ficha4];
+
+
 
 
 
