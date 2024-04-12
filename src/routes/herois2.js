@@ -104,26 +104,22 @@ router.post('/game/save', (req, res) =>{
             attributes: fichaSalvar.player.attributes,
             progress: fichaSalvar.player.progress
         };
-        new Ficha(novaFicha).save().then(() =>{
+        new Ficha(novaFicha).save().then((ficha) =>{
             console.log("Ficha salva com sucesso");
             req.flash("success_msg", "Ficha salva com sucesso");
             Usuario.findOne({_id: fichaSalvar.usuarioId}).lean().then((user) =>{ 
                 switch (fichaSalvar.index) {
                     case 0:
-                        const save1 = new mongoose.Types.ObjectId(fichaSalvar.idFicha);
-                        user.gameSaves.save1 = save1;
+                        user.gameSaves.save1 = ficha._id;
                         break;
                     case 1:
-                        const save2 = new mongoose.Types.ObjectId(fichaSalvar.idFicha);
-                        user.gameSaves.save2 = save2;
+                        user.gameSaves.save2 = ficha._id;
                         break;
                     case 2:
-                        const save3 = new mongoose.Types.ObjectId(fichaSalvar.idFicha);
-                        user.gameSaves.save3 = save3;
+                        user.gameSaves.save3 = ficha._id;
                         break;
                     case 3:
-                        const save4 = new mongoose.Types.ObjectId(fichaSalvar.idFicha);
-                        user.gameSaves.save4 = save4;
+                        user.gameSaves.save4 = ficha._id;
                         break;
                     default:
                         break;        
