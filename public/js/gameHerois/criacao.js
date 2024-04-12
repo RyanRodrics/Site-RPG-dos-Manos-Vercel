@@ -173,7 +173,7 @@ function procurarObjetoNome(array,nomes){
             }
         })
     })
-    console.log(itensAchados)
+  
     return itensAchados;
 }
 
@@ -184,8 +184,7 @@ let fichaDetalhes = {
 }
 //document.querySelector("salvar").value = fichaRecebida;
 if(JSON.parse(localStorage.getItem('saveEscolhido'))!= -1){
-    console.log(fichaDetalhes)
-    console.log(fichaRecebida)
+
     objetos.guns.unshift(objetos.mao);
     objetos.armors.unshift(objetos.roupa);
     protagonista.push(new Save(fichaRecebida.nick,fichaRecebida.level,[fichaRecebida.attributes.for,fichaRecebida.attributes.des,fichaRecebida.attributes.con,fichaRecebida.attributes.int,fichaRecebida.attributes.sab,fichaRecebida.attributes.car],fichaRecebida.gender,procurarObjetoNome(objetos.guns,fichaRecebida.inventory.armas),procurarObjetoNome(objetos.armors,fichaRecebida.inventory.armaduras),fichaRecebida._id, fichaDetalhes.userID, fichaDetalhes.index));
@@ -193,7 +192,6 @@ if(JSON.parse(localStorage.getItem('saveEscolhido'))!= -1){
         jogador().progress = npc;
     })
     jogador().dinheiro = fichaRecebida.money;
-    console.log(jogador());
     display_criacao.style.display = "none";
     display_jogo.style.display = "flex";
 }

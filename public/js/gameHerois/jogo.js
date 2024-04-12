@@ -56,13 +56,15 @@ function leave(){
     salvar_mapaAnterior("Mapa");
 }
 let mostrarLugares = setInterval(() => {
-    jogador().progress.forEach((element) =>{
-        switch(element.nome){
-            case "Denji":
-                irDenji.style.display = "none";
-                break;
-        }
-    })
+    if(jogador() != undefined){
+        jogador().progress.forEach((element) =>{
+            switch(element.nome){
+                case "Denji":
+                    irDenji.style.display = "none";
+                    break;
+            }
+        })
+    }
 },10)
 //abrindo inventario
 import { criarFicha } from "./ficha.js";

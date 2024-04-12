@@ -144,5 +144,5 @@ export function criarFicha(){
             descer(index);
         }
     })
-    inv_itens_armadura.innerText = jogador().invArmaduras[1].toString();
+    inv_itens_armadura.innerText = jogador().invArmaduras[jogador().invArmaduras.length-1].toString();
 }
