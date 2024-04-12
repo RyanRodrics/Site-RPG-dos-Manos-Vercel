@@ -90,7 +90,7 @@ export function criarFicha(){
         player:{
             nick: jogador().nome,
             ca: jogador().armor,
-            gender: jogador().gender,
+            gender: jogador().genero,
             hp: jogador().vida,
             level: jogador().lvl,
             money: jogador().dinheiro,
