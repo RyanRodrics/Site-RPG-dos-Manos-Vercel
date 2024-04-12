@@ -1,4 +1,6 @@
 const saves = document.querySelectorAll(".saves");
+
+console.log(saves)
 let savesRecebidos;
 if(document.getElementById("fichas") != null){
     const fichas = JSON.parse(document.getElementById("fichas").value);
@@ -26,6 +28,8 @@ function carregarJogo(index){
         localStorage.setItem('saveEscolhido', JSON.stringify(saveEscolhido));
     }
 }
+
+console.log(JSON.parse(document.getElementById("jogador").value))
 
 saves.forEach((element,index) =>{
     element.onclick = ()=>{

@@ -182,6 +182,7 @@ let fichaDetalhes = {
     userID : JSON.parse(localStorage.getItem('saveEscolhido')).usuarioId,
     index: JSON.parse(localStorage.getItem('saveEscolhido')).index
 }
+console.log(fichaDetalhes.index)
 
 //document.querySelector("salvar").value = fichaRecebida;
 if(fichaRecebida!= -1){
