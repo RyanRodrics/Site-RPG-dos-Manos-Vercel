@@ -117,7 +117,7 @@ function build_prota(){
                 }
                 atributos[atributoPrincipal.value] =atributos[atributoPrincipal.value] +2;
                 atributos[atributoSecundario.value] =atributos[atributoSecundario.value] +1;
-                protagonista.push(new Save(nick.value,1,atributos,atributoGenero.value,[objetos.mao],[objetos.roupa],"",fichaDetalhes.userID,fichaDetalhes.index));
+                protagonista.push(new Save(nick.value,1,atributos,atributoGenero.value,[objetos.mao],[objetos.roupa],undefined,fichaDetalhes.userID,fichaDetalhes.index));
                 
                 const nickSplit = nick.value.split(" ");
                 let espaco = "";
