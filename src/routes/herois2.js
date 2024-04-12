@@ -71,20 +71,13 @@ router.get('/game/play',(req,res) => {
 router.post('/game/save', (req, res) =>{
     const fichaSalvar = JSON.parse(req.body.salvar);
     if(fichaSalvar.idFicha != "") {
-        Ficha.findOne({_id: fichaSalvar.idFicha}).lean().then((ficha) =>{ 
-            ficha.level = fichaSalvar.level;
-            ficha.hp = fichaSalvar.hp;
-            ficha.inventory = fichaSalvar.inventario;
-            ficha.money = fichaSalvar.money;
-            ficha.attributes = {
-                for: fichaSalvar.for,
-                des: fichaSalvar.des,
-                con: fichaSalvar.con,
-                int: fichaSalvar.int,
-                sab: fichaSalvar.sab,
-                car: fichaSalvar.car
-            };
-            ficha.progress = progress; 
+        Ficha.findOne({_id: fichaSalvar.player.idFicha}).lean().then((ficha) =>{ 
+            ficha.level = fichaSalvar.player.level;
+            ficha.hp = fichaSalvar.player.hp;
+            ficha.inventory = fichaSalvar.player.inventario;
+            ficha.money = fichaSalvar.player.money;
+            ficha.attributes = fichaSalvar.player.attributes;
+            ficha.progress = fichaSalvar.player.progress; 
             ficha.save().then(() =>{
                 console.log("Save realizado com sucesso");
                 req.flash("success_msg", "Save realizado com sucesso");
@@ -99,27 +92,20 @@ router.post('/game/save', (req, res) =>{
         });
     } else {
         const novaFicha = {
-            nick: fichaSalvar.nick,
-            level: fichaSalvar.level,
-            gender: fichaSalvar.gender,
-            ca: fichaSalvar.ca,
-            hp: fichaSalvar.hp,
-            inventory: fichaSalvar.inventario,
-            money: fichaSalvar.money,
-            attributes: {
-                for: fichaSalvar.for,
-                des: fichaSalvar.des,
-                con: fichaSalvar.con,
-                int: fichaSalvar.int,
-                sab: fichaSalvar.sab,
-                car: fichaSalvar.car
-            },
-            progress: progress
+            nick: fichaSalvar.player.nick,
+            level: fichaSalvar.player.level,
+            gender: fichaSalvar.player.gender,
+            ca: fichaSalvar.player.ca,
+            hp: fichaSalvar.player.hp,
+            inventory: fichaSalvar.player.inventario,
+            money: fichaSalvar.player.money,
+            attributes: fichaSalvar.player.attributes,
+            progress: fichaSalvar.player.progress
         };
         new Ficha(novaFicha).save().then(() =>{
             console.log("Ficha salva com sucesso");
             req.flash("success_msg", "Ficha salva com sucesso");
-            Usuario.findOne({_id: fichaSalvar.idUser}).lean().then((user) =>{ 
+            Usuario.findOne({_id: fichaSalvar.usuarioId}).lean().then((user) =>{ 
                 switch (fichaSalvar.index) {
                     case 0:
                         const save1 = new mongoose.Types.ObjectId(fichaSalvar.idFicha);
