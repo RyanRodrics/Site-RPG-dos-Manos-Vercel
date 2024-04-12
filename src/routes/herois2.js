@@ -70,19 +70,19 @@ router.get('/game/play',(req,res) => {
 
 router.post('/game/save', (req, res) =>{
     const fichaSalvar = JSON.parse(req.body.salvar);
-    if(req.body.salvar.id) {
-        Ficha.findOne({_id: fichaSalvar.id}).lean().then((ficha) =>{
+    if(fichaSalvar.idFicha != "") {
+        Ficha.findOne({_id: fichaSalvar.idFicha}).lean().then((ficha) =>{ 
             ficha.level = fichaSalvar.level;
             ficha.hp = fichaSalvar.hp;
             ficha.inventory = fichaSalvar.inventario;
             ficha.money = fichaSalvar.money;
             ficha.attributes = {
-                for: parseInt(fichaSalvar.for),
-                des: parseInt(fichaSalvar.des),
-                con: parseInt(fichaSalvar.con),
-                int: parseInt(fichaSalvar.int),
-                sab: parseInt(fichaSalvar.sab),
-                car: parseInt(fichaSalvar.car)
+                for: fichaSalvar.for,
+                des: fichaSalvar.des,
+                con: fichaSalvar.con,
+                int: fichaSalvar.int,
+                sab: fichaSalvar.sab,
+                car: fichaSalvar.car
             };
             ficha.progress = progress; 
             ficha.save().then(() =>{
@@ -119,22 +119,22 @@ router.post('/game/save', (req, res) =>{
         new Ficha(novaFicha).save().then(() =>{
             console.log("Ficha salva com sucesso");
             req.flash("success_msg", "Ficha salva com sucesso");
-            Usuario.findOne({_id: fichaSalvar.userId}).lean().then((user) =>{ 
+            Usuario.findOne({_id: fichaSalvar.idUser}).lean().then((user) =>{ 
                 switch (fichaSalvar.index) {
                     case 0:
-                        const save1 = new mongoose.Types.ObjectId(fichaSalvar.id);
+                        const save1 = new mongoose.Types.ObjectId(fichaSalvar.idFicha);
                         user.gameSaves.save1 = save1;
                         break;
                     case 1:
-                        const save2 = new mongoose.Types.ObjectId(fichaSalvar.id);
+                        const save2 = new mongoose.Types.ObjectId(fichaSalvar.idFicha);
                         user.gameSaves.save2 = save2;
                         break;
                     case 2:
-                        const save3 = new mongoose.Types.ObjectId(fichaSalvar.id);
+                        const save3 = new mongoose.Types.ObjectId(fichaSalvar.idFicha);
                         user.gameSaves.save3 = save3;
                         break;
                     case 3:
-                        const save4 = new mongoose.Types.ObjectId(fichaSalvar.id);
+                        const save4 = new mongoose.Types.ObjectId(fichaSalvar.idFicha);
                         user.gameSaves.save4 = save4;
                         break;
                     default:
