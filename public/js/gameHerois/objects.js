@@ -6,7 +6,7 @@ const fuzil = new Arma("Fuzil","2d10",1500,"Dex");
 const espada = new Arma("Espada","1d6",25,"For");
 const rapieira = new Arma("Rapieira","1d6",25,"Dex");
 const pistola = new Arma("Pistola","1d10",250,"Dex");
-const lancaGranada = new Arma("Lança granada","6d6",3000,"Dex");
+const lancaGranada = new Arma("Lança Granada","6d6",3000,"Dex");
 const martelo = new Arma("Martelo de Guerra","6d6",2000,"For");
 const chicote = new Arma("Chicote","2d6",500,"Car");
 
@@ -19,12 +19,12 @@ export {motosserra,arco,fuzil,espada,rapieira,pistola,lancaGranada,martelo,chico
 const roupa = new Armadura("Roupa",10,0,'N');
 const casaco = new Armadura("Casaco",11,150,'L');
 const couro = new Armadura("Couro Batido",12,250,'L');
-const algodao = new Armadura("Roupa de Algodão",13,400,'L');
-const ferro = new Armadura("Armadura de Ferro",14,500,'M');
+const algodao = new Armadura("Roupa De Algodão",13,400,'L');
+const ferro = new Armadura("Armadura De Ferro",14,500,'M');
 const colete = new Armadura("Colete",15,800,'M');
-const grafeno = new Armadura("Armadura de Grafeno",16,1750,'M');
-const dima = new Armadura("Armadura de Diamante",16,1500,'P');
-const metalGear = new Armadura("MetalGear",18,2000,'P');
+const grafeno = new Armadura("Armadura De Grafeno",16,1750,'M');
+const dima = new Armadura("Armadura De Diamante",16,1500,'P');
+const metalGear = new Armadura("Metalgear",18,2000,'P');
 const adamantium = new Armadura("Adamantium",20,2500,'P');
 
 

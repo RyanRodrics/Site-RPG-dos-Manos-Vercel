@@ -72,13 +72,14 @@ router.post('/game/save', (req, res) =>{
     console.log(req.body.salvar);
     const fichaSalvar = JSON.parse(req.body.salvar);
     if(fichaSalvar.idFicha != "") {
-        Ficha.findOne({_id: fichaSalvar.player.idFicha}).lean().then((ficha) =>{ 
+        Ficha.findOne({_id: fichaSalvar.player.idFicha}).then((ficha) =>{ 
             ficha.level = fichaSalvar.player.level;
             ficha.hp = fichaSalvar.player.hp;
-            ficha.inventory = fichaSalvar.player.inventario;
+            ficha.inventory = fichaSalvar.player.inventory;
             ficha.money = fichaSalvar.player.money;
             ficha.attributes = fichaSalvar.player.attributes;
             ficha.progress = fichaSalvar.player.progress; 
+            console.log(ficha);
             ficha.save().then(() =>{
                 console.log("Save realizado com sucesso");
                 req.flash("success_msg", "Save realizado com sucesso");
@@ -98,7 +99,7 @@ router.post('/game/save', (req, res) =>{
             gender: fichaSalvar.player.gender,
             ca: fichaSalvar.player.ca,
             hp: fichaSalvar.player.hp,
-            inventory: fichaSalvar.player.inventario,
+            inventory: fichaSalvar.player.inventory,
             money: fichaSalvar.player.money,
             attributes: fichaSalvar.player.attributes,
             progress: fichaSalvar.player.progress
