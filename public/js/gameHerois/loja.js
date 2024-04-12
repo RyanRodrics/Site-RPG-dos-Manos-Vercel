@@ -1,4 +1,4 @@
-import {guns,armors} from "./objects.js";
+import {guns,armors, mao, roupa} from "./objects.js";
 import { jogador } from "./criacao.js";
 import { leave } from "./jogo.js";
 
@@ -109,6 +109,8 @@ function compraVendaArmadura(index){
 //função principal
 let verificaCompraVenda;
 export function criarLoja(){
+    remover(guns,mao)
+    remover(armors,roupa)
     let checkBox = compraVenda.checked? true: false;
     armasImagens.forEach((element,index) => {
         element.src = `/imgs/gameHerois/loja/itens/${guns[index].type}.png`;
