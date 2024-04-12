@@ -146,5 +146,5 @@ export function criarFicha(){
         }
     })
     inv_itens_armadura.innerText = jogador().invArmaduras[1].toString();
-    salvarButton.onclick = enviandoSave;
+    enviandoSave();
 }
