@@ -74,6 +74,28 @@ class Personagem{
     }
 
     //GETS
+    get for(){
+        return this.#forca;
+    }
+    get dex(){
+        return this.#destreza;
+    }
+    get con(){
+        return this.#constituicao;
+    }
+    get int(){
+        return this.#inteligencia;
+    }
+    get sab(){
+        return this.#sabedoria;
+    }
+    get car(){
+        return this.#carisma;
+    }
+
+
+
+
     get modFor(){
         return Math.floor((this.#forca-10)/2);
     }

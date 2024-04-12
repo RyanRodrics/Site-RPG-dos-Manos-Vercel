@@ -40,6 +40,27 @@ function montarInventario(){
         if(index == 1) element.style.color = "red";
     });
 }
+function formatarNome2(nome){
+    let novoNome = "";
+    let nomeSplit = nome.split("");
+    nomeSplit.forEach((letra)=>{
+        if(letra != " "){
+            novoNome += letra
+        }
+    })
+    return novoNome;
+}
+function enviarNomesArray(array){
+    let nomesRecebidos = []
+    array.forEach((element)=>{
+        if(element.type.length > 1){
+            nomesRecebidos.push(formatarNome2(element.type));
+        }else{
+            nomesRecebidos.push(formatarNome2(element.name))
+        }
+    })
+    return nomesRecebidos
+}
 //butões da ficha
 function subir(index){
     if(index > 0){
@@ -58,10 +79,38 @@ function descer(index){
     }
     montarInventario();
 }
+
 //buildando o que será salvado
+const saveEnviar = {
+    player:{
+        nick: jogador().nome,
+        ca: jogador().armor,
+        gender: jogador().gender,
+        hp: jogador().vida,
+        level: jogador().lvl,
+        money: jogador().dinheiro,
+        inventory: {
+            armas: enviarNomesArray(jogador().inv),
+            armaduras: enviarNomesArray(jogador().invArmaduras)
+        },
+        attributes: {
+            for: jogador().for,
+            des: jogador().dex,
+            con: jogador().con,
+            int: jogador().int,
+            sab: jogador().sab,
+            car: jogador().car
+        },
+        progress: jogador().progress,
+        idFicha: jogador().saveid
+    },
+    usuarioId: jogador().userid,
+    index:jogador().index
+}
 function enviandoSave(){
-    document.querySelector('#salvar').value = JSON.stringify(jogador());
-    
+   
+    localStorage.setItem('saveEscolhido', JSON.stringify(saveEnviar));
+    document.querySelector('#salvar').value = JSON.stringify(saveEnviar);
 }
 //importando dados do jogador
 import {jogador} from "./criacao.js";
