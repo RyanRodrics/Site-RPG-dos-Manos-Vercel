@@ -10,6 +10,8 @@ if(document.getElementById("fichas") != null){
 export function savesRecebidosExport(){
     return savesRecebidos;
 }
+
+
 console.log(savesRecebidos)
 function carregarJogo(index){
     const saveEscolhido = {
