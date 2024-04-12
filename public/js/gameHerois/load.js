@@ -22,7 +22,8 @@ function carregarJogo(index){
     if(savesRecebidos[index] != null){
         localStorage.setItem('saveEscolhido', JSON.stringify(saveEscolhido));
     }else{
-        localStorage.setItem('saveEscolhido',-1);
+        saveEscolhido.player = -1
+        localStorage.setItem('saveEscolhido', JSON.stringify(saveEscolhido));
     }
 }
 

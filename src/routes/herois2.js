@@ -107,7 +107,7 @@ router.post('/game/save', (req, res) =>{
         new Ficha(novaFicha).save().then((ficha) =>{
             console.log("Ficha salva com sucesso");
             req.flash("success_msg", "Ficha salva com sucesso");
-            Usuario.findOne({_id: fichaSalvar.usuarioId}).lean().then((user) =>{ 
+            Usuario.findOne({_id: fichaSalvar.usuarioId}).lean().then((user) =>{
                 switch (fichaSalvar.index) {
                     case 0:
                         user.gameSaves.save1 = ficha._id;
@@ -122,6 +122,7 @@ router.post('/game/save', (req, res) =>{
                         user.gameSaves.save4 = ficha._id;
                         break;
                     default:
+                        console.log(fichaSalvar.index)
                         break;        
                 }
                 user.save().then(() =>{

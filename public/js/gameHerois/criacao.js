@@ -117,7 +117,7 @@ function build_prota(){
                 }
                 atributos[atributoPrincipal.value] =atributos[atributoPrincipal.value] +2;
                 atributos[atributoSecundario.value] =atributos[atributoSecundario.value] +1;
-                protagonista.push(new Save(nick.value,1,atributos,atributoGenero.value,[objetos.mao],[objetos.roupa],undefined,fichaDetalhes.userID,fichaDetalhes.index));
+                protagonista.push(new Save(nick.value,1,atributos,atributoGenero.value,[objetos.mao],[objetos.roupa],null,fichaDetalhes.userID,fichaDetalhes.index));
                 
                 const nickSplit = nick.value.split(" ");
                 let espaco = "";
@@ -182,8 +182,9 @@ let fichaDetalhes = {
     userID : JSON.parse(localStorage.getItem('saveEscolhido')).usuarioId,
     index: JSON.parse(localStorage.getItem('saveEscolhido')).index
 }
+
 //document.querySelector("salvar").value = fichaRecebida;
-if(JSON.parse(localStorage.getItem('saveEscolhido'))!= -1){
+if(fichaRecebida!= -1){
 
     objetos.guns.unshift(objetos.mao);
     objetos.armors.unshift(objetos.roupa);

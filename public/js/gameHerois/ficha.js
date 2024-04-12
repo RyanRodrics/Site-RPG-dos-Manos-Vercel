@@ -112,7 +112,8 @@ export function criarFicha(){
         usuarioId: jogador().userid,
         index:jogador().index
     }
-    
+    console.log(saveEnviar.usuarioId)
+    console.log(saveEnviar.index)
     localStorage.setItem('saveEscolhido', JSON.stringify(saveEnviar));
     document.querySelector('#salvar').value = JSON.stringify(saveEnviar);
     //caracteristicas
