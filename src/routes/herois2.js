@@ -69,6 +69,7 @@ router.get('/game/play',(req,res) => {
 });
 
 router.post('/game/save', (req, res) =>{
+    console.log(req.body.salvar);
     const fichaSalvar = JSON.parse(req.body.salvar);
     if(fichaSalvar.idFicha != "") {
         Ficha.findOne({_id: fichaSalvar.player.idFicha}).lean().then((ficha) =>{ 
