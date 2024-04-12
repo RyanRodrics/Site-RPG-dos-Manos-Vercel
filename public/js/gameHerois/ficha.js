@@ -81,41 +81,40 @@ function descer(index){
 }
 
 //buildando o que será salvado
-const saveEnviar = {
-    player:{
-        nick: jogador().nome,
-        ca: jogador().armor,
-        gender: jogador().gender,
-        hp: jogador().vida,
-        level: jogador().lvl,
-        money: jogador().dinheiro,
-        inventory: {
-            armas: enviarNomesArray(jogador().inv),
-            armaduras: enviarNomesArray(jogador().invArmaduras)
-        },
-        attributes: {
-            for: jogador().for,
-            des: jogador().dex,
-            con: jogador().con,
-            int: jogador().int,
-            sab: jogador().sab,
-            car: jogador().car
-        },
-        progress: jogador().progress,
-        idFicha: jogador().saveid
-    },
-    usuarioId: jogador().userid,
-    index:jogador().index
-}
-function enviandoSave(){
-   
-    localStorage.setItem('saveEscolhido', JSON.stringify(saveEnviar));
-    document.querySelector('#salvar').value = JSON.stringify(saveEnviar);
-}
+
 //importando dados do jogador
 import {jogador} from "./criacao.js";
 
 export function criarFicha(){
+    const saveEnviar = {
+        player:{
+            nick: jogador().nome,
+            ca: jogador().armor,
+            gender: jogador().gender,
+            hp: jogador().vida,
+            level: jogador().lvl,
+            money: jogador().dinheiro,
+            inventory: {
+                armas: enviarNomesArray(jogador().inv),
+                armaduras: enviarNomesArray(jogador().invArmaduras)
+            },
+            attributes: {
+                for: jogador().for,
+                des: jogador().dex,
+                con: jogador().con,
+                int: jogador().int,
+                sab: jogador().sab,
+                car: jogador().car
+            },
+            progress: jogador().progress,
+            idFicha: jogador().saveid
+        },
+        usuarioId: jogador().userid,
+        index:jogador().index
+    }
+    
+    localStorage.setItem('saveEscolhido', JSON.stringify(saveEnviar));
+    document.querySelector('#salvar').value = JSON.stringify(saveEnviar);
     //caracteristicas
     escrevendo(inv_nome,jogador().nome);
     escrevendo(inv_CA,jogador().armor);
@@ -146,5 +145,4 @@ export function criarFicha(){
         }
     })
     inv_itens_armadura.innerText = jogador().invArmaduras[1].toString();
-    enviandoSave();
 }
