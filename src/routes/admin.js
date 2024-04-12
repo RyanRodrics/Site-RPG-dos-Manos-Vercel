@@ -161,7 +161,7 @@ router.post('/fichas/edit', (req, res) =>{
     if (req.body.Espada) {armas.push("Espada");}
     if (req.body.Rapieira) {armas.push("Rapieira");}
     if (req.body.Pistola) {armas.push("Pistola");}
-    if (req.body.LancaGranada) {armas.push("LancaGranada");}
+    if (req.body.LancaGranada) {armas.push("LançaGranada");}
     if (req.body.MarteloDeGuerra) {armas.push("MarteloDeGuerra");}
     if (req.body.Chicote) {armas.push("Chicote");}
     if(req.body.Casaco) {armaduras.push("Casaco");}
