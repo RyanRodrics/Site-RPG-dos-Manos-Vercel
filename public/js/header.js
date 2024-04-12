@@ -1,4 +1,5 @@
 const navArray = document.querySelectorAll("#navbar ul li a");
+const navDDArray = document.querySelectorAll('#navbar ul li[id^="dropdown"]');
 
 export function navSelect(url){
     navArray.forEach((nav) => {
@@ -7,7 +8,18 @@ export function navSelect(url){
             nav.style.fontWeight="500"
         }
     })
+    navDDArray.forEach((DD) => {
+        const aDDArray = document.querySelectorAll(`#${DD.id} div a`);
+        const primeiroA = document.querySelector(`#${DD.id} > a`);
+        console.log(primeiroA.innerHTML)
+        aDDArray.forEach((anchor)=>{
+            if(anchor.href==navArray[0]+url){
+                primeiroA.style.backgroundColor="#820101"
+            }
+        })
+    })
 }
+
 
 const mostrarSenha = document.querySelector("#mostrarSenha");
 

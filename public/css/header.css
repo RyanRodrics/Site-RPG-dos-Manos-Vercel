@@ -77,12 +77,13 @@
 
 }
 
-#navbar li{
+#navbar > ul > li{
     float: left;
     border-right: 1px solid #bbb;
 }
 
-#navbar li:last-child, #dropdown li{
+
+#navbar li:last-child{
     border-right: none;
 }
 
@@ -155,7 +156,7 @@
     height: 70%;
     border-radius: 100%;
     width: 70%;
-    
+    cursor: pointer;
 }
 
 #loginUser button img{
