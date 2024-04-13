@@ -1,6 +1,4 @@
 const saves = document.querySelectorAll(".saves");
-
-console.log(saves)
 let savesRecebidos;
 if(document.getElementById("fichas") != null){
     const fichas = JSON.parse(document.getElementById("fichas").value);
@@ -13,8 +11,6 @@ export function savesRecebidosExport(){
     return savesRecebidos;
 }
 
-
-console.log(savesRecebidos)
 function carregarJogo(index){
     const saveEscolhido = {
         player: savesRecebidos[index],
