@@ -71,8 +71,8 @@ router.get('/game/play',(req,res) => {
 router.post('/game/save', (req, res) =>{
     console.log(req.body.salvar);
     const fichaSalvar = JSON.parse(req.body.salvar);
-    console.log(fichaSalvar.idFicha);
-    if(fichaSalvar.idFicha) {
+    console.log(fichaSalvar.player.idFicha);
+    if(fichaSalvar.player.idFicha) {
         Ficha.findOne({_id: fichaSalvar.player.idFicha}).then((ficha) =>{ 
             ficha.level = fichaSalvar.player.level;
             ficha.hp = fichaSalvar.player.hp;
