@@ -69,9 +69,7 @@ router.get('/game/play',(req,res) => {
 });
 
 router.post('/game/save', (req, res) =>{
-    console.log(req.body.salvar);
     const fichaSalvar = JSON.parse(req.body.salvar);
-    console.log(fichaSalvar.player.idFicha);
     if(fichaSalvar.player.idFicha) {
         Ficha.findOne({_id: fichaSalvar.player.idFicha}).then((ficha) =>{ 
             ficha.level = fichaSalvar.player.level;
@@ -80,7 +78,6 @@ router.post('/game/save', (req, res) =>{
             ficha.money = fichaSalvar.player.money;
             ficha.attributes = fichaSalvar.player.attributes;
             ficha.progress = fichaSalvar.player.progress; 
-            console.log(ficha);
             ficha.save().then(() =>{
                 console.log("Save realizado com sucesso");
                 req.flash("success_msg", "Save realizado com sucesso");
@@ -131,7 +128,7 @@ router.post('/game/save', (req, res) =>{
                         save4 = new mongoose.Types.ObjectId(ficha._id);
                         break;
                     default:
-                        console.log(fichaSalvar.index)
+                        console.log(fichaSalvar.index);
                         break;        
                 }
                 const gameSaves = {
@@ -141,7 +138,6 @@ router.post('/game/save', (req, res) =>{
                     save4: save4
                 }
                 user.gameSaves = gameSaves;
-                console.log(user)
                 user.save().then(() =>{
                     console.log("Usuário editado com sucesso");
                     req.flash("success_msg", "Usuário editado com sucesso");
