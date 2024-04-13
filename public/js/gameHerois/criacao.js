@@ -117,7 +117,7 @@ function build_prota(){
                 }
                 atributos[atributoPrincipal.value] =atributos[atributoPrincipal.value] +2;
                 atributos[atributoSecundario.value] =atributos[atributoSecundario.value] +1;
-                protagonista.push(new Save(nick.value,1,atributos,atributoGenero.value,[objetos.mao],[objetos.roupa],null,fichaDetalhes.userID,fichaDetalhes.index));
+                protagonista.push(new Save(nick.value,1,atributos,atributoGenero.value,[objetos.mao],[objetos.roupa],null,fichaDetalhes.userID,fichaDetalhes.index,fichaDetalhes.gameSaves));
                 
                 const nickSplit = nick.value.split(" ");
                 let espaco = "";
@@ -180,6 +180,7 @@ function procurarObjetoNome(array,nomes){
 let fichaRecebida = JSON.parse(localStorage.getItem('saveEscolhido')).player;
 let fichaDetalhes = {
     userID : JSON.parse(localStorage.getItem('saveEscolhido')).usuarioId,
+    gameSaves: JSON.parse(localStorage.getItem('saveEscolhido')).gameSaves,
     index: JSON.parse(localStorage.getItem('saveEscolhido')).index
 }
 console.log(fichaDetalhes.index)
@@ -189,7 +190,7 @@ if(fichaRecebida!= -1){
 
     objetos.guns.unshift(objetos.mao);
     objetos.armors.unshift(objetos.roupa);
-    protagonista.push(new Save(fichaRecebida.nick,fichaRecebida.level,[fichaRecebida.attributes.for,fichaRecebida.attributes.des,fichaRecebida.attributes.con,fichaRecebida.attributes.int,fichaRecebida.attributes.sab,fichaRecebida.attributes.car],fichaRecebida.gender,procurarObjetoNome(objetos.guns,fichaRecebida.inventory.armas),procurarObjetoNome(objetos.armors,fichaRecebida.inventory.armaduras),fichaRecebida._id, fichaDetalhes.userID, fichaDetalhes.index));
+    protagonista.push(new Save(fichaRecebida.nick,fichaRecebida.level,[fichaRecebida.attributes.for,fichaRecebida.attributes.des,fichaRecebida.attributes.con,fichaRecebida.attributes.int,fichaRecebida.attributes.sab,fichaRecebida.attributes.car],fichaRecebida.gender,procurarObjetoNome(objetos.guns,fichaRecebida.inventory.armas),procurarObjetoNome(objetos.armors,fichaRecebida.inventory.armaduras),fichaRecebida._id, fichaDetalhes.userID, fichaDetalhes.index,fichaDetalhes.gameSaves));
     fichaRecebida.progress.forEach((npc)=>{
         jogador().progress = npc;
     })

@@ -347,12 +347,14 @@ class Save extends Personagem{
     #idFicha
     #idUser
     #progresso
-    constructor(anick,alevel,atributos,agenero,aarma,aarmadura,idFicha,idUser,index){
+    #gameSaves
+    constructor(anick,alevel,atributos,agenero,aarma,aarmadura,idFicha,idUser,index,gameSaves){
         super(anick,alevel,atributos,agenero,aarma,aarmadura);
         this.#progresso = [];
         this.#idFicha = idFicha;
         this.#idUser = idUser;
         this.#indexSave = index;
+        this.#gameSaves = gameSaves;
     }
     get progress(){
         return this.#progresso;
@@ -377,6 +379,12 @@ class Save extends Personagem{
     }
     set index(index){
         this.#indexSave =index; 
+    }
+    get gamesaves(){
+        return this.#gameSaves
+    }
+    set gamesaves(gamesave){
+        this.#gameSaves = gamesave;
     }
 }
 
