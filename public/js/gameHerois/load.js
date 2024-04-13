@@ -30,8 +30,6 @@ function carregarJogo(index){
     }
 }
 
-console.log(JSON.parse(document.getElementById("jogador").value))
-
 saves.forEach((element,index) =>{
     element.onclick = ()=>{
         carregarJogo(index);
