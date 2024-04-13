@@ -183,7 +183,6 @@ let fichaDetalhes = {
     gameSaves: JSON.parse(localStorage.getItem('saveEscolhido')).gameSaves,
     index: JSON.parse(localStorage.getItem('saveEscolhido')).index
 }
-console.log(fichaDetalhes.index)
 
 //document.querySelector("salvar").value = fichaRecebida;
 if(fichaRecebida!= -1){
