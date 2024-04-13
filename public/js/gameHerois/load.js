@@ -19,6 +19,7 @@ function carregarJogo(index){
     const saveEscolhido = {
         player: savesRecebidos[index],
         usuarioId: JSON.parse(document.getElementById("jogador").value).id,
+        gameSaves: JSON.parse(document.getElementById("jogador").value).gameSaves,
         index: index
     }
     if(savesRecebidos[index] != null){

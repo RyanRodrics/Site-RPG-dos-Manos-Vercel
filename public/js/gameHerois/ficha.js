@@ -109,6 +109,7 @@ export function criarFicha(){
             progress: jogador().progress,
             idFicha: jogador().saveid
         },
+        gameSaves: jogador().gamesaves,
         usuarioId: jogador().userid,
         index:jogador().index
     }
