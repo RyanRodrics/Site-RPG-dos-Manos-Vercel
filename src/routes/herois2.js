@@ -71,6 +71,7 @@ router.get('/game/play',(req,res) => {
 router.post('/game/save', (req, res) =>{
     console.log(req.body.salvar);
     const fichaSalvar = JSON.parse(req.body.salvar);
+    console.log(fichaSalvar.idFicha);
     if(fichaSalvar.idFicha) {
         Ficha.findOne({_id: fichaSalvar.player.idFicha}).then((ficha) =>{ 
             ficha.level = fichaSalvar.player.level;
@@ -108,24 +109,38 @@ router.post('/game/save', (req, res) =>{
             console.log("Ficha salva com sucesso");
             req.flash("success_msg", "Ficha salva com sucesso");
             Usuario.findOne({_id: fichaSalvar.usuarioId}).then((user) =>{
+                let save1 = null;
+                if(fichaSalvar.gameSaves.save1 != null) {save1 = new mongoose.Types.ObjectId(fichaSalvar.gameSaves.save1);}
+                let save2 = null;
+                if(fichaSalvar.gameSaves.save2 != null) {save2 = new mongoose.Types.ObjectId(fichaSalvar.gameSaves.save2);}
+                let save3 = null;
+                if(fichaSalvar.gameSaves.save3 != null) {save3 = new mongoose.Types.ObjectId(fichaSalvar.gameSaves.save3);}
+                let save4 = null;
+                if(fichaSalvar.gameSaves.save4 != null) {save4 = new mongoose.Types.ObjectId(fichaSalvar.gameSaves.save4);}
                 switch (fichaSalvar.index) {
                     case 0:
-                        user.gameSaves.save1 = ficha._id;
+                        save1 = new mongoose.Types.ObjectId(ficha._id);
                         break;
                     case 1:
-                        user.gameSaves.save2 = ficha._id;
+                        save2 = new mongoose.Types.ObjectId(ficha._id);
                         break;
                     case 2:
-                        user.gameSaves.save3 = ficha._id;
+                        save3 = new mongoose.Types.ObjectId(ficha._id);
                         break;
                     case 3:
-                        user.gameSaves.save4 = ficha._id;
+                        save4 = new mongoose.Types.ObjectId(ficha._id);
                         break;
                     default:
                         console.log(fichaSalvar.index)
                         break;        
                 }
-                
+                const gameSaves = {
+                    save1: save1,
+                    save2: save2,
+                    save3: save3,
+                    save4: save4
+                }
+                user.gameSaves = gameSaves;
                 console.log(user)
                 user.save().then(() =>{
                     console.log("Usuário editado com sucesso");
