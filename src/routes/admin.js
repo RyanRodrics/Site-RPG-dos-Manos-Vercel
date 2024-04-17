@@ -417,7 +417,9 @@ router.post('/usuarios/edit', (req, res) =>{
                     Usuario.findOne({_id: req.body.id}).then((usuario) =>{
                         usuario.username = req.body.username;
                         usuario.nickname = req.body.nickname;
-                        usuario.password = senhahash;
+                        if (req.body.password != "padrão") {
+                            usuario.password = senhahash;
+                        }
                         usuario.token = req.body.token;
                         //usuario.eAdmin = parseInt(req.body.eAdmin);
                         usuario.gameSaves = gameSaves;

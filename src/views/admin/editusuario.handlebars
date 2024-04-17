@@ -15,8 +15,9 @@
         <label for="nickname">Nickname: </label>
         <input type="text" name="nickname" id="nickname" value="{{usuario.nickname}}" required>
 
-        <label for="password">Password: </label>
-        <input type="password" name="password" id="password" value="{{usuario.password}}" required>
+        <label for="password">Mudar Password: </label>
+        <input type="checkbox" name="novasenha" id="novasenha" >
+        <input type="hidden" name="password" id="password" value="padrão">
 
         <label for="token">Token: </label>
         <input type="hidden" id="inputtoken" value="{{usuario.token}}">
@@ -93,7 +94,18 @@
 
 <script>
     document.getElementById(`${document.getElementById("inputtoken").value}`).selected = "selected";
-    
+    const novasenha = document.querySelector("#novasenha");
+
+    novasenha.addEventListener('change', function() {
+        if(novasenha.checked) {
+            document.querySelector("#password").value = "";
+            document.querySelector("#password").type = "password";
+        } else {
+            document.querySelector("#password").type = "hidden";
+            document.querySelector("#password").value = "padrão";
+        }
+    });
+
     for (let i = 1; i<5; i++) {
         document.querySelectorAll(`#saves${i}`).forEach(function(op) {
             if (document.getElementById(`inputsave${i}`).value == op.value) {
