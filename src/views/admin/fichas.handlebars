@@ -1,61 +1,67 @@
-<h3>Lista de Fichas</h3>
-<a href="/admin/fichas/add"><button>Nova Ficha</button></a>
+<h2>Lista de Fichas</h2>
+<a href="/admin/fichas/add"><button class="buttongreen">Nova Ficha</button></a>
 
 {{#each fichas}}
-<div class="ficha_show">
-    <hr>
+<div class="showficha">
     <h4>Nick: {{nick}}</h4>
     <h4>Level: {{level}}</h4>
     <h4>Gender: {{gender}}</h4>
     <h4>CA: {{ca}}</h4>
     <h4>HP: {{hp}}</h4>
     <h4>Money: {{money}}</h4>
-    <h4>Inventory</h5>
-    <ul>
-        <li>
-            <p>Armas:</p> 
-            <ol type="1" start="0">
-                {{#each inventory.armas}}
-                    <li>{{this}}</li>
-                {{else}}
-                    <li>Mão</li>
-                {{/each}}
-            </ol>
-        </li>
-        <li>
-            <p>Armaduras: </p>
-            <ol type="1" start="0">
-                {{#each inventory.armaduras}}
-                    <li>{{this}}</li>
-                {{else}}
-                    <li>Mão</li>
-                {{/each}}
-            </ol>
-        </li>
-    </ul>
-    <h4>Attributes</h4>
-    <ul>
-        <li>for: {{attributes.for}}</li>
-        <li>des: {{attributes.des}}</li>
-        <li>con: {{attributes.con}}</li>
-        <li>int: {{attributes.int}}</li>
-        <li>sab: {{attributes.sab}}</li>
-        <li>car: {{attributes.car}}</li>
-    </ul>
-    <h4>Progress</h4>
-    <ul>
-    {{#each progress}}
-        <li>{{nome}}: {{rep}}</li>
+    <br>
+    <div class="attributes">
+        <h4>Attributes:</h4>
+        <ul>
+            <li>for {{attributes.for}}</li>
+            <li>des {{attributes.des}}</li>
+            <li>con {{attributes.con}}</li>
+            <li>int {{attributes.int}}</li>
+            <li>sab {{attributes.sab}}</li>
+            <li>car {{attributes.car}}</li>
+        </ul>
+    </div>
+    <br>
+    <div class="inventory">
+        <h4>Inventory</h5>
+        <ul>
+            <li>
+                <p>Armas: </p>
+                <ol type="1" start="0">
+                    {{#each inventory.armas}}
+                        <li>{{this}}</li>
+                    {{else}}
+                        <li>Mão</li>
+                    {{/each}}
+                </ol>
+            </li>
+            <li>
+                <p>Armaduras: </p>
+                <ol type="1" start="0">
+                    {{#each inventory.armaduras}}
+                        <li>{{this}}</li>
+                    {{else}}
+                        <li>Mão</li>
+                    {{/each}}
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <div class="progress">
+        <h4>Progress</h4>
+        <ul>
+        {{#each progress}}
+            <li>{{nome}}: {{rep}}</li>
         
-    {{else}}
-        <li>0% progress</li>
-    {{/each}}
-    </ul>
+        {{else}}
+            <li>0% progress</li>
+        {{/each}}
+        </ul>
+    </div>
     <h5>Date: {{date}}</h5>
-    <br><br>
-    <a href="/admin/fichas/edit/{{_id}}"><button>Editar</button></a>
-    <a href="/admin/fichas/deletar/{{_id}}"><button>Deletar</button></a>
-    <hr>
+    <br>
+    <a href="/admin/fichas/edit/{{_id}}"><button class="buttonblue">Editar</button></a>
+    <a href="/admin/fichas/deletar/{{_id}}"><button class="buttonred">Deletar</button></a>
 </div>
 {{else}}
 <h4>Não há fichas registradas</h4>

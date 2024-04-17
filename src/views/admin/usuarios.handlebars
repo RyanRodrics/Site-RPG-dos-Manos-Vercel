@@ -1,5 +1,5 @@
 <h3>Lista de Usuários</h3>
-<a href="/admin/usuarios/add"><button>Novo Usuário</button></a>
+<a href="/admin/usuarios/add"><button class="buttongreen">Novo Usuário</button></a>
 
 {{#each usuarios}}
 <div>
@@ -46,8 +46,8 @@
     </ul>
     <h5>Date: {{date}}</h5>
     <br><br>
-    <a href="/admin/usuarios/edit/{{_id}}"><button>Editar</button></a>
-    <a href="/admin/usuarios/deletar/{{_id}}"><button>Deletar</button></a>
+    <a href="/admin/usuarios/edit/{{_id}}"><button class="buttonblue">Editar</button></a>
+    <a href="/admin/usuarios/deletar/{{_id}}"><button class="buttonred">Deletar</button></a>
     <hr>
 </div>
 {{else}}

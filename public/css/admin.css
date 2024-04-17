@@ -1,15 +1,71 @@
-body {
-    
+.contentBody{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+h1{
+    margin-left: 1%;
+    padding: 1%;
+}
+h2{
+    margin-left: 1%;
+    padding: 1%;
+}
+button{
+    border-radius: 5px;
+    margin-left: 2%;
+    padding: 0.5%;
+    color: white;
+}
+.buttongreen{
+    background-color: lawngreen;
+}
+.buttonred{
+    background-color: red;
+}
+.buttonblue{
+    background-color: blue;
+}
+
+.showficha{
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 1%;
+    padding: 2%;
+}
+.showficha h4{
+    text-align: justify;
+    padding-right: 2%;
+    display: inline-flex;
+}
+.showficha li{
+    display: inline-flex;
+}
+.showficha button{
+    margin-left: 0%;
+}
+
+.attributes{
+    padding-top: 1%;
+}
+.attributes ul{
+    display: inline-flex;
+    list-style-type: disc;
+}
+.attributes li{
+    margin-right: 1%;
+}
+
+.inventory{
+    display: inline-flex;
+    padding-bottom: 1%;
+}
+.inventory ul{
+    list-style-type: disc;
 }
 
 
-/*.ficha_show {
-    text-align: justify;
-    li{
-        display:list-item;
-        line-height: 100%;
-    }
-    line-height: 50%;
-    padding-left: 1%;
-    padding-top: 1%;
-}*/
+.progress{
+    margin-bottom: 1%;
+}
