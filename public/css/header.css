@@ -198,14 +198,14 @@
     font-size: 16px;
 }
 #tela-login #mostrarSenha{
-    background-image: url(/imgs/tokens/mostrarSenha.png);
+    /* background-image: url(/imgs/tokens/mostrarSenha.png); */
     width: 30px;
     height: 30px;
     border: 0;
     background-color: transparent;
     position: absolute;
     right: 10%;
-    top:41%;
+    top:42%;
 }
 #tela-login #mostrarSenha img{
     width: 30px;
