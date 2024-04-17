@@ -11,7 +11,6 @@ export function navSelect(url){
     navDDArray.forEach((DD) => {
         const aDDArray = document.querySelectorAll(`#${DD.id} div a`);
         const primeiroA = document.querySelector(`#${DD.id} > a`);
-        console.log(primeiroA.innerHTML)
         aDDArray.forEach((anchor)=>{
             if(anchor.href==navArray[0]+url){
                 primeiroA.style.backgroundColor="#820101"
@@ -22,14 +21,16 @@ export function navSelect(url){
 
 
 const mostrarSenha = document.querySelector("#mostrarSenha");
+const mostrarSenhaImg = document.querySelector("#mostrarSenha img");
 
 mostrarSenha.onclick = ()=>{
     if(inputSenha.type =="text"){
         inputSenha.type ="password";
+        mostrarSenhaImg.src="/imgs/olhoNormal.png";
     }else{
-        inputSenha.type ="text"
+        inputSenha.type ="text";
+        mostrarSenhaImg.src="/imgs/olhoCortado.png";
     }
-    console.log("AAAAAAAAAAAAAAAAAAAAAAAAA");
 };
 
 
