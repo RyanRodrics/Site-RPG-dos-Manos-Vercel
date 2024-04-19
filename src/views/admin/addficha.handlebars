@@ -3,9 +3,8 @@
 {{else}}
 {{/each}}
 
-<h3>Nova Ficha:</h3>
-<div>
-    <hr>
+<h2>Nova Ficha:</h2>
+<div class="showficha">
     <form action="/admin/fichas/new" method="post" oninput="outca.value = 10+Math.floor((parseInt(des.value)-10)/2); outhp.value=level.value*(10+Math.floor((parseInt(con.value)-10)/2));" id="addficha">
 
         <label for="nick">Nick: </label>
@@ -109,7 +108,6 @@
         <br><br>
         <button type="submit" class="buttongreen">Criar Ficha</button>
     </form>
-    <hr>
 </div>
 
 <script>

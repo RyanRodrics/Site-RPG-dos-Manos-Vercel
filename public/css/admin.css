@@ -45,6 +45,18 @@ button{
 .showficha button{
     margin-left: 0%;
 }
+.showficha label{
+    text-align: justify;
+    display: inline-flex;
+}
+.showficha input{
+   
+}
+.showficha .out{
+    justify-content: end;
+    align-items: end;
+    padding-bottom: 2%;
+}
 
 .attributes{
     padding-top: 1%;

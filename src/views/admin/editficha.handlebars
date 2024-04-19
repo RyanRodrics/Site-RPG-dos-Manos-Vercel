@@ -3,9 +3,8 @@
 {{else}}
 {{/each}}
 
-<h3>Editar Ficha:</h3>
-<div>
-    <hr>
+<h2>Editar Ficha: "{{ficha._id}}"</h2>
+<div class="showficha">
     <form action="/admin/fichas/edit" method="post" oninput="outca.value = 10+Math.floor((parseInt(des.value)-10)/2); outhp.value=level.value*(10+Math.floor((parseInt(con.value)-10)/2));" id="editficha">
         <input type="hidden" name="id" id="id" value="{{ficha._id}}">
 
@@ -24,15 +23,31 @@
         </select>
         <br><br>
 
-        <label for="ca">CA: </label>
-        <output name="outca" id="outca" form="editficha"></output>
-
-        <label for="hp">HP: </label>
-        <output name="outhp" id="outhp" form="editficha"></output>
-        <br><br>
+        <div class="out">
+            <label for="ca" id="outcalabel">CA: </label>
+            <output name="outca" id="outca" form="editficha"></output>
+            <label for="hp" id="outcalabel">HP: </label>
+            <output name="outhp" id="outhp" form="editficha"></output>
+        </div>
 
         <label for="money">Money: </label>
         <input type="number" name="money" id="money" value="{{ficha.money}}">
+        <br><br>
+
+        <label for="attributes">Attributes</label>
+        <br>
+        <label for="for">For: </label>
+        <input type="number" name="for" id="for" value="{{ficha.attributes.for}}">
+        <label for="des">Des: </label>
+        <input type="number" name="des" id="des" value="{{ficha.attributes.des}}">
+        <label for="con">Con: </label>
+        <input type="number" name="con" id="con" value="{{ficha.attributes.con}}">
+        <label for="int">Int: </label>
+        <input type="number" name="int" id="int" value="{{ficha.attributes.int}}">    
+        <label for="sab">Sab: </label>
+        <input type="number" name="sab" id="sab" value="{{ficha.attributes.sab}}">    
+        <label for="car">Car: </label>
+        <input type="number" name="car" id="car" value="{{ficha.attributes.car}}">                    
         <br><br>
 
         <label for="inventory">Inventory</label>
@@ -82,22 +97,6 @@
         <label for="Adamantium">Adamantium</label>                                             
         <br><br>
 
-        <label for="attributes">Attributes</label>
-        <br>
-        <label for="for">For: </label>
-        <input type="number" name="for" id="for" value="{{ficha.attributes.for}}">
-        <label for="des">Des: </label>
-        <input type="number" name="des" id="des" value="{{ficha.attributes.des}}">
-        <label for="con">Con: </label>
-        <input type="number" name="con" id="con" value="{{ficha.attributes.con}}">
-        <label for="int">Int: </label>
-        <input type="number" name="int" id="int" value="{{ficha.attributes.int}}">    
-        <label for="sab">Sab: </label>
-        <input type="number" name="sab" id="sab" value="{{ficha.attributes.sab}}">    
-        <label for="car">Car: </label>
-        <input type="number" name="car" id="car" value="{{ficha.attributes.car}}">                    
-        <br><br>
-
         <label for="progress">Progress: </label>
         <input type="hidden" id="progress" name="progress" value="{{ficha.progress}}">
         <br>
@@ -114,7 +113,6 @@
         <br><br>
         <button type="submit" class="buttonblue">Editar Ficha</button>
     </form>
-    <hr>
 </div>
 
 {{#each ficha.progress}}
