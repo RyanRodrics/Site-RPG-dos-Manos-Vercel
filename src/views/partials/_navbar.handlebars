@@ -1,18 +1,19 @@
 <header id="headerGeral">
     <div id="homelogo">
-        <a href="/" ><img src="/imgs/LOGO-rpgdosmanos-semfundo.png" alt="LOGO_HEROIS"></a>
+        <a class="navOpen">&#9776;</a>
+        <a href="/" class="homelogoImg" ><img src="/imgs/LOGO-rpgdosmanos-semfundo.png" alt="LOGO_HEROIS"></a>
     </div>
-    <nav id="navbar">
+    <div id="navbar">
         <ul>
             <li><a href="/">HOME</a></li>
             <li><a href="/admin">ADMIN</a></li>
             <li><a href="/gamedragon">GAME</a></li>
             <li id="dropdown">
-                <a href="#mesas" class="dropbtn">CAMPANHAS</a>
+                <a class="dropbtn">CAMPANHAS<i class="fa fa-caret-down"></i></a>
                 <div class="dropdown-content">
                     <ul>
                         <li id="dropdownH2">
-                            <a href="/herois2" class="dropbtnH2">HERÓIS DO AMANHA 2</a>
+                            <a class="dropbtnH2">HERÓIS DO AMANHA 2</a>
                             <div class="dropdown-contentH2">
                                 <ul>
                                     <li><a href="/herois2">PÁGINA</a></li>
@@ -26,7 +27,7 @@
                 </div>
             </li>
         </ul>
-    </nav>
+    </div>
     <div id="loginUser">
         <button id = "login">
             <img src="/imgs/tokens/login.png" alt="LOGIN">   

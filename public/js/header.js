@@ -1,5 +1,6 @@
 const navArray = document.querySelectorAll("#navbar ul li a");
 const navDDArray = document.querySelectorAll('#navbar ul li[id^="dropdown"]');
+const navOpen = document.querySelector('.navOpen');
 
 export function navSelect(url){
     navArray.forEach((nav) => {
@@ -18,6 +19,17 @@ export function navSelect(url){
         })
     })
 }
+
+function openNavbar(){
+    const navbar = document.querySelector('#navbar');
+    if (navbar.style.display === "block") {
+      navbar.style.display = "none";
+    } else {
+        navbar.style.display = "block";
+    }
+}
+
+navOpen.onclick = openNavbar;
 
 
 const mostrarSenha = document.querySelector("#mostrarSenha");
