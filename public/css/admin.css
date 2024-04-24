@@ -77,7 +77,13 @@ button{
     list-style-type: disc;
 }
 
-
 .progress{
     margin-bottom: 1%;
+}
+
+.showusuario{
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 1%;
+    padding: 2%;
 }

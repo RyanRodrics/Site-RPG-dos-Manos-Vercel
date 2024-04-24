@@ -1,9 +1,8 @@
-<h3>Lista de Usuários</h3>
+<h2>Lista de Usuários</h2>
 <a href="/admin/usuarios/add"><button class="buttongreen">Novo Usuário</button></a>
 
 {{#each usuarios}}
-<div>
-    <hr>
+<div class="showusuario">
     <h4>Username: {{username}}</h4>
     <h5>Nickname: {{nickname}}</h5>
     <h5>Password: {{password}}</h5>
@@ -48,7 +47,6 @@
     <br><br>
     <a href="/admin/usuarios/edit/{{_id}}"><button class="buttonblue">Editar</button></a>
     <a href="/admin/usuarios/deletar/{{_id}}"><button class="buttonred">Deletar</button></a>
-    <hr>
 </div>
 {{else}}
 <h4>Não há usuários registrados</h4>
