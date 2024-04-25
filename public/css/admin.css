@@ -82,8 +82,19 @@ button{
 }
 
 .showusuario{
+    position: relative;
     border: 1px solid black;
     border-radius: 25px;
     margin: 1%;
     padding: 2%;
+    overflow: auto;
+}
+
+.token{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    float: right;
+    padding: 10px;
 }
