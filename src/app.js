@@ -88,6 +88,10 @@ app.get('/gamedragon', (req, res) =>{
     res.render("games/gamedragon", {css: [{css: "gamedragon"}], js: [{js: "gamedragon"}]});
 });
 
+app.get('/slayerfall', (req, res) =>{
+    res.render("slayerfall", {css: [{css: "slayerfall"}], js:[{js: "slayerfall"}]});
+});
+
 app.use('/admin', admin);
 app.use('/usuario', usuario);
 app.use('/herois2', herois2);
