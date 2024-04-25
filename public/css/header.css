@@ -389,8 +389,17 @@
     #dropdownH2{
         display: block;
     }
-    #navbar .dropdown-content, #navbar .dropdown-contentH2 {
+    #navbar [class^="dropdown-content"] {
         position: relative;
+    }
+    #navbar [class^="dropdown-content"] ul {
+        background-color: #404040;
+    }
+    #navbar [class^="dropdown-content"] ul li a{
+        /* color: #000; */
+    }
+    #navbar [class^="dropdown-content"] > ul > li:last-child {
+        border-bottom: 1px solid #000;
     }
 
 }

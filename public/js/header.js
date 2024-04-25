@@ -1,7 +1,9 @@
 const navArray = document.querySelectorAll("#navbar ul li a");
 const navDDArray = document.querySelectorAll('#navbar ul li[id^="dropdown"]');
 const navOpen = document.querySelector('.navOpen');
+const dropBtnArray = document.querySelectorAll('#navbar ul > li > a[class^="dropbtn"]')
 
+// MARCAR PAGINA ATUAL NA NAVBAR
 export function navSelect(url){
     navArray.forEach((nav) => {
         if(nav.href==navArray[0]+url){
@@ -10,8 +12,8 @@ export function navSelect(url){
         }
     })
     navDDArray.forEach((DD) => {
-        const aDDArray = document.querySelectorAll(`#${DD.id} div a`);
-        const primeiroA = document.querySelector(`#${DD.id} > a`);
+        const aDDArray = document.querySelectorAll(`#navbar #${DD.id} div a`);
+        const primeiroA = document.querySelector(`#navbar #${DD.id} > a`);
         aDDArray.forEach((anchor)=>{
             if(anchor.href==navArray[0]+url){
                 primeiroA.style.backgroundColor="#820101"
@@ -20,6 +22,7 @@ export function navSelect(url){
     })
 }
 
+// NAVBAR NO MOBILE
 function openNavbar(){
     const navbar = document.querySelector('#navbar');
     if (navbar.style.display === "block") {
@@ -28,13 +31,28 @@ function openNavbar(){
         navbar.style.display = "block";
     }
 }
-
 navOpen.onclick = openNavbar;
+navDDArray.forEach((DD)=>{
+    const ddBtn = document.querySelector(`#navbar #${DD.id} > a`);
+    const ddCChild = document.querySelectorAll(`#navbar #${DD.id} [class^="dropdown-content"]`);
+    ddBtn.onclick = () => {
+        if(ddCChild[0].style.display === "block"){
+            ddCChild.forEach((childDD)=>{
+                childDD.style.display = "none"
+            })
+            
+        } else {
+            ddCChild[0].style.display = "block"
+        }
+        
+    }
+})
 
 
+
+// MOSTRAR SENHA
 const mostrarSenha = document.querySelector("#mostrarSenha");
 const mostrarSenhaImg = document.querySelector("#mostrarSenha img");
-
 mostrarSenha.onclick = ()=>{
     if(inputSenha.type =="text"){
         inputSenha.type ="password";
@@ -49,6 +67,7 @@ mostrarSenha.onclick = ()=>{
 
 
 
+// TELA DE LOGIN SLA
 
 //const { ler_json, escrever_json } = require('./app.js');
     // Seu código JavaScript aqui
