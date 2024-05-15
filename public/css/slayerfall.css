@@ -10,12 +10,6 @@
     height: 100vh;
 }
 
-.cabecalho .filtro {
-    
-    height: 100%;
-    width: 100%;
-}
-
 .navegacao {
     display: inline-flex;
     align-items: flex-end;
