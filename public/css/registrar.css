@@ -54,7 +54,7 @@
     height: 80vh;
     background-color: rgba(0,0,0,0.7);
 }
-.registro h3{
+.registro label{
 
     font-weight: lighter;
     color: white;
@@ -68,11 +68,12 @@
     justify-content: space-between;
 }
 .registro ul li{
+    display: grid;
     padding: 2%;
 }
 .registro ul li input{
     padding: 2px;
-    width: 100%;
+
 }
 .registro button{
     padding: 10px 20px;
