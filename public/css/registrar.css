@@ -23,11 +23,18 @@
 }
 
 .registroArea{
-    display: flow;
+    display: flex;
     justify-content: center;
-    padding: 0 10% 10% 10%;
     background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(70,3,3,1) 44%, rgba(87,6,6,1) 52%, rgba(121,54,9,1) 87%, rgba(163,86,9,1) 100%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(70,3,3,1) 44%, rgba(87,6,6,1) 52%, rgba(121,54,9,1) 87%, rgba(163,86,9,1) 100%);
+}
+.registroArea #backgroundLogo{
+    justify-self: left;
+    
+}
+.registroArea #backgroundLogo img{
+    width: 50vw;
+    min-height: 100vh;
 }
 #titulo{
     padding-top: 10px;
@@ -36,17 +43,31 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(70,3,3,1) 44%, rgba(8
    
 }
 .registro{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   
-    width: 100%;
+    font-family: "Permanent Marker", cursive;
+    width: 50vw;
+    justify-self: right;
+    align-self: center;
+    margin: 0 5%;
     border-radius: 20px;
     border: 3px solid white;
-    margin-top: 5%;
-    min-height: 50vh;
+    height: 80vh;
+    background-color: rgba(0,0,0,0.7);
 }
 .registro h3{
 
     font-weight: lighter;
     color: white;
     
+}
+.registro ul{
+    display: flex;
+    padding: 5%;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.registro ul li{
+    padding: 2%;
+}
+.registro ul li input{
+    padding: 2px;
 }
