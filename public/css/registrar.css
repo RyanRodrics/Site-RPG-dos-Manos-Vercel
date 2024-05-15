@@ -8,12 +8,12 @@
     width: 100%;
     flex-wrap: wrap;
     background-color: black;
-    filter: brightness(0.5) blur(1px);
 }
 .catalogoCampanhas ul li {
     width: 25% ;
     height: 33vh;
     transition: 0.25s;
+    filter: brightness(0.5) blur(1px);
 }
 .catalogoCampanhas ul li img{
     width: 100%;
@@ -44,6 +44,7 @@
 }
 .registro{
     font-family: "Permanent Marker", cursive;
+    
     width: 50vw;
     justify-self: right;
     align-self: center;
@@ -53,7 +54,7 @@
     height: 80vh;
     background-color: rgba(0,0,0,0.7);
 }
-.registro h3{
+.registro label{
 
     font-weight: lighter;
     color: white;
@@ -64,10 +65,21 @@
     padding: 5%;
     flex-wrap: wrap;
     width: 90%;
+    justify-content: space-between;
 }
 .registro ul li{
+    display: grid;
     padding: 2%;
 }
 .registro ul li input{
     padding: 2px;
+
+}
+.registro button{
+    padding: 10px 20px;
+    justify-self: center;
+    background-color: brown;
+    font-weight: bolder;
+    color: lightgoldenrodyellow;
+    cursor:pointer;
 }
