@@ -31,30 +31,59 @@ body{
 
 #logoHome{
     height: auto;
-    display: inline-flex ;
+    align-items: center;
+    display: flex ;
     width: 100vw;
     justify-content: center;
 }
 
 #logoHome img{
     justify-self: left;
-    width: 50%;
+    width: 50vw;
 }
 
 #logoHome h1{
-    width: 50%;
-    font-size:100px;
+    width: 50vw;
+    font-size:48px;
     font-family: "Permanent Marker", cursive;
-    align-self: center;
-    justify-content: center;
+    justify-self: right;
     text-align: center;
     color: white;
-} 
+}
+
+.catalogoCampanhas{
+    display: flex;
+    width: 100%;
+}
+.catalogoCampanhas ul{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: black;
+}
+.catalogoCampanhas ul li {
+    width: 25% ;
+    height: 33vh;
+    transition: 0.25s;
+    filter: brightness(0.5) blur(1px);
+}
+/* .catalogoCampanhas ul li:hover{
+    filter: brightness(1) blur(0);
+} */
+.catalogoCampanhas ul li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
 @media (max-width: 600px) {
     #melhorCanal div h1{
         font-size: 24px;
     }
     #melhorCanal div h2{
         font-size: 16px;
+    }
+    #logoHome h1{
+        font-size: 24px;
     }
 }
