@@ -4,9 +4,9 @@
 }
 
 .cabecalho {
-    background: url('../imgs/caminho-westerias.jpg'), no-repeat;
+    background: url('../imgs/slayerfall/slayerfall\ banner.png'), no-repeat;
     background-size: 100%;
-    backdrop-filter: blur(5px);
+    background-position: 0%, 0%;
     height: 100vh;
 }
 
