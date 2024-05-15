@@ -4,12 +4,22 @@
 }
 
 .cabecalho {
-    background-image: url('../imgs/caminho-westerias.jpg');
-    background-repeat: no-repeat;
+    background: url('../imgs/caminho-westerias.jpg'), no-repeat;
     background-size: 100%;
+    backdrop-filter: blur(5px);
     height: 100vh;
 }
 
-#navegacao li{
+.cabecalho .filtro {
+    
+    height: 100%;
+    width: 100%;
+}
+
+.navegacao {
+    display: inline-flex;
+    align-items: flex-end;
+}
+.navegacao li{
     display: inline-block;    
 }
