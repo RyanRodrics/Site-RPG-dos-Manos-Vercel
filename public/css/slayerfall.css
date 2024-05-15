@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho {
+    background-image: url('../imgs/caminho-westerias.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100vh;
+}
+
+#navegacao li{
+    display: inline-block;    
+}

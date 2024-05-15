@@ -92,6 +92,10 @@ app.get('/registrar', (req, res) =>{
     res.render("registrar", {css: [{css: "registrar"}], js: [{js: "registrar"}]});
 });
 
+app.get('/slayerfall', (req, res) =>{
+    res.render("slayerfall", {css: [{css: "slayerfall"}], js: [{js: "slayerfall"}]});
+});
+
 app.use('/admin', admin);
 app.use('/usuario', usuario);
 app.use('/herois2', herois2);
